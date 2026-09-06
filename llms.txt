@@ -1,0 +1,36 @@
+# Anonymisierer-Tools
+
+> Local tools by Robert Meyer for preparing sensitive content before sharing. The Mac app, iPhone/iPad app, and Chrome extension are separate products. Windows is in development.
+
+## Products — Deutsch / English
+
+- [Mac DE](https://anonymisierer-tools.de/)
+- [Mac EN](https://anonymisierer-tools.de/index_eng.html)
+- [iPhone & iPad DE](https://anonymisierer-tools.de/ios/)
+- [iPhone & iPad EN](https://anonymisierer-tools.de/ios/index_eng.html)
+- [Chrome DE](https://anonymisierer-tools.de/chrome/)
+- [Chrome EN](https://anonymisierer-tools.de/chrome/index_eng.html)
+- [Windows DE](https://anonymisierer-tools.de/windows/)
+- [Windows EN](https://anonymisierer-tools.de/windows/index_eng.html)
+
+Mac: local text and image editing, global shortcuts, optional restoration using a mapping kept in RAM for no more than five minutes. macOS 14 or later. Individual license EUR 9.99; ten licenses EUR 79.90; 25+ on request. Provider checkout prices apply.
+
+iPhone/iPad: native mobile app, separate EUR 9.99 purchase. Text, screenshots, photos, share sheet. PDF content is processed as plain text without retaining PDF layout. Do not assume Mac restoration features are included.
+
+Chrome: free text-focused extension. Optional local Gemini Nano detection when supported. Not equivalent to the Mac app.
+
+Windows: planned, no confirmed release date, price or final feature set. Registration records interest, not an order.
+
+Automatic detection may miss information. Review results before sharing. Reversible placeholder mapping is pseudonymization, not irreversible anonymization. The Mac website demo uses fixed fictional data, no real AI service or app detection engine.
+
+## Legal and contact
+
+- [Impressum](https://anonymisierer-tools.de/impressum.html)
+- [Legal notice](https://anonymisierer-tools.de/impressum_eng.html)
+- [Datenschutz](https://anonymisierer-tools.de/datenschutz.html)
+- [Privacy policy](https://anonymisierer-tools.de/datenschutz_eng.html)
+- [Mac EULA DE](https://anonymisierer-tools.de/eula.html)
+- [Mac EULA EN](https://anonymisierer-tools.de/eula_eng.html)
+- Contact: rm@kostenmanager.net
+
+The existing separate web demo remains at https://ki-anonymisierer.de/webdemo/. It is not included in the Mac license.

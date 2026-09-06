@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /index-bordeaux.html
+Sitemap: https://anonymisierer-tools.de/sitemap.xml
