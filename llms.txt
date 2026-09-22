@@ -1,6 +1,6 @@
 # Anonymisierer-Tools
 
-> Local tools by Robert Meyer for preparing sensitive content before sharing. The Mac app, iPhone/iPad app, and Chrome extension are separate products. Windows is in development.
+> Local tools by Robert Meyer for preparing sensitive content before sharing. The Mac app, iPhone/iPad app, and Chrome extension are separate products. The Windows app is a separate product on the Microsoft Store.
 
 ## Products — Deutsch / English
 
@@ -19,7 +19,7 @@ iPhone/iPad: native mobile app, separate EUR 9.99 purchase. Text, screenshots, p
 
 Chrome: free text-focused extension. Optional local Gemini Nano detection when supported. Not equivalent to the Mac app.
 
-Windows: planned, no confirmed release date, price or final feature set. Registration records interest, not an order.
+Windows: native text app on the Microsoft Store (one-time purchase €14.99, x64 and ARM64, German-only interface): https://apps.microsoft.com/detail/9N229VW00Z01. Local regex, built-in NER, optional local AI (small in-app model or Ollama/LM Studio). Tray icon, editor, Ctrl+Shift+A shortcut, local clipboard Safeguard, optional restoration of the last session held in RAM for at most five minutes. No image or screenshot processing.
 
 Automatic detection may miss information. Review results before sharing. Reversible placeholder mapping is pseudonymization, not irreversible anonymization. The Mac website demo uses fixed fictional data, no real AI service or app detection engine.
 

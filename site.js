@@ -158,6 +158,7 @@
     });
   });
   document.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => link.addEventListener('click', () => track(product === 'ios' ? 'ios_app_store_click' : 'mac_app_store_click')));
+  document.querySelectorAll('a[href*="apps.microsoft.com"]').forEach(link => link.addEventListener('click', () => track('windows_store_click')));
   document.querySelectorAll('a[href*="chromewebstore.google.com"]').forEach(link => link.addEventListener('click', () => track('chrome_install_click')));
   document.querySelector('#next-step')?.addEventListener('click', () => track('demo_step_next'));
 })();
