@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Server license terms · KI-Anonymisierer</title>
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="img/icon.webp" type="image/webp">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#0e1729;font:400 16.5px/1.7 "Schibsted Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+header,main,footer{width:min(780px,calc(100% - 36px));margin:auto}
+header{padding:22px 0;border-bottom:1px solid #d4d9e1;display:flex;gap:16px;font-size:15px}
+header a:first-child{margin-right:auto}
+a{color:#2f55e6;text-underline-offset:3px}
+main{padding:36px 0 56px;overflow-wrap:anywhere}
+h1{font-size:clamp(28px,4.4vw,40px);line-height:1.1;letter-spacing:-.03em;margin:0 0 20px}
+h2{font-size:20px;margin:30px 0 8px;letter-spacing:-.01em}
+p,li{margin:8px 0;color:#2b3547}
+footer{border-top:1px solid #d4d9e1;padding:20px 0 36px;font-size:14px;display:flex;gap:18px}
+html.embedded header,html.embedded footer{display:none}
+html.embedded main{padding-top:14px}
+</style>
+<script>if(window.self!==window.top){document.documentElement.classList.add("embedded");document.addEventListener("keydown",function(e){if(e.key==="Escape"){parent.postMessage({type:"anonymisierer-close-frame"},"*")}});document.addEventListener("click",function(e){var a=e.target.closest("a[href]");if(!a)return;var h=a.getAttribute("href");if(/(^|\/)index(_eng)?\.html/.test(h)){e.preventDefault();parent.postMessage({type:"anonymisierer-goto",hash:h.split("#")[1]||""},"*")}})}</script>
+</head>
+<body>
+<header><a href="index_eng.html">← Back to overview</a><a href="eula-server.html" hreflang="de" lang="de">DE</a></header>
+<main><h1>End User License Agreement (EULA)</h1>
+<p><strong>KI-Anonymisierer Server and KI-Anonymisierer Windows Client</strong><br>Licensor: Robert Meyer, c/o Online-Impressum.de #4759, Europaring 90, 53757 Sankt Augustin, Germany, email: <a href="mailto:rm@kostenmanager.net">rm@kostenmanager.net</a> (“Licensor”)<br>Last updated: September 2026 · Version 1.2</p>
+<p><em>This English version is provided for convenience. In case of doubt, the German version prevails.</em></p>
+<h2>1. Scope and subject matter</h2>
+<p>1.1 This EULA governs the use of the program “KI-Anonymisierer Server”, provided as a container image, including the bundled detection rules, web interface and documentation, and of the “KI-Anonymisierer Windows Client”, including related updates (together the “Software”), by the acquirer or user (“Licensee”).</p>
+<p>1.2 By downloading, installing or using the Software, the Licensee accepts these terms.</p>
+<p>1.3 The single-seat apps for macOS, iOS and Windows and the Chrome extension are subject to their own terms.</p>
+<h2>2. Free use (single seat)</h2>
+<p>Use is free of charge if the server runs on the same device on which the accessing application is used by a single natural person. This applies to private and professional use. In this mode, the server is only reachable via the loopback address (127.0.0.1).</p>
+<h2>3. Licensed use (multi-user)</h2>
+<p>3.1 A paid license is required as soon as the server is used over a network by more than one device, the Windows Client is used in its multi-user edition, or the server is provided to several natural persons.</p>
+<p>3.2 The license is delivered as a signed license key and applies to the number of workstations and the period stated therein. The invoice and license key serve as proof of license and must be kept for the duration of use.</p>
+<h2>4. Counting workstations</h2>
+<p>4.1 A workstation is a natural person who accesses the server via a client. Clients include in particular the Windows Client, the Chrome extension with server connection and own applications using the API. The number of persons counts, not the number of installations or devices.</p>
+<p>4.2 The assignment of persons may change (e.g. when staff changes), provided the licensed total is not exceeded.</p>
+<p>4.3 Automated connections without a fixed assignment to persons (e.g. batch processing or specialist procedures) require a separate agreement.</p>
+<h2>5. License types and term</h2>
+<p>5.1 Fixed-term license: valid for the period stated in the license key; it does not renew automatically. It is renewed by acquiring a new key.</p>
+<p>5.2 Perpetual license: the right of use is unlimited in time. Updates are provided for twelve months from issue of the license key; further updates can be purchased separately. The most recently provided version may continue to be used indefinitely.</p>
+<p>5.3 When a fixed-term license expires, the right to multi-user operation ends. Free single-seat use under section 2 remains unaffected.</p>
+<h2>6. Scope of rights</h2>
+<p>6.1 The Licensee may install, operate and use the Software within the agreed scope for its own purposes, including processing its own business data and connecting its own applications via the API within its organization.</p>
+<p>6.2 Operation by a service provider on behalf of the Licensee (e.g. an IT service provider or data center) is permitted, provided the Software is used exclusively for the Licensee.</p>
+<h2>7. Not permitted</h2>
+<p>Without the Licensor’s prior consent in text form, the following is not permitted:</p>
+<ul><li>passing on, renting or sublicensing the image or license keys,</li><li>reverse engineering, decompiling or modifying the Software, except where mandatorily permitted under §§ 69d, 69e of the German Copyright Act,</li><li>removing or circumventing the license check,</li><li>operating the Software as a paid or publicly accessible service for third parties,</li><li>removing copyright or license notices.</li></ul>
+<h2>8. Updates</h2>
+<p>During the term under section 5, the Licensor provides updates and bug fixes at its own discretion. There is no entitlement to specific future features. Substantially extended versions may be offered as separate products.</p>
+<h2>9. Third-party components</h2>
+<p>The image contains third-party software under its respective licenses, including the language model urchade/gliner_multi_pii-v1 (Apache 2.0) and its base model microsoft/mdeberta-v3-base (MIT). A full list is included in the image as THIRD_PARTY_LICENSES.txt. The license terms of these components take precedence for them.</p>
+<h2>10. Data processing</h2>
+<p>10.1 The Software processes text exclusively on the hardware on which it runs. Nothing is transmitted to the Licensor or to third parties. Texts are not stored; only metrics without content are logged. The license key is checked locally; there is no online activation.</p>
+<p>10.2 On first start of the model variant, the language model is downloaded from a public source. No user data is transmitted in the process.</p>
+<p>10.3 Operation is the Licensee’s own responsibility. In network operation, texts are sent from the client to the server; the Licensee remains responsible for a privacy-compliant setup, in particular an encrypted connection (HTTPS) and the access keys. The Licensor has no access to processed content. Support involving access to the Licensee’s systems only takes place under a separate agreement.</p>
+<h2>11. No assurance of complete detection</h2>
+<p>11.1 Detection is rule-based and optionally model-based. It may be incomplete or incorrect in individual cases. The Software is an aid and replaces neither the Licensee’s duty of care nor a legal or data protection assessment.</p>
+<p>11.2 The Licensee must review anonymized results before any sharing, publication or transfer to third parties, including AI services.</p>
+<h2>12. Warranty</h2>
+<p>12.1 For consumers, the statutory warranty rights for digital products (§§ 327 et seq. German Civil Code) apply.</p>
+<p>12.2 For businesses (§ 14 German Civil Code) and legal entities under public law, the warranty period is twelve months from provision. The Licensor remedies defects at its option by fixing the error (e.g. an update) or by replacement delivery. Insignificant deviations from the product description do not give rise to claims for defects.</p>
+<p>12.3 No guarantee in the legal sense is given, in particular not for the complete detection of all personal data (section 11).</p>
+<h2>13. Liability</h2>
+<p>13.1 The Licensor is liable without limitation for intent and gross negligence, for damage resulting from injury to life, body or health, for fraudulently concealed defects and under the German Product Liability Act.</p>
+<p>13.2 In cases of simple negligence, the Licensor is only liable for breaches of essential contractual obligations, limited to the typical, foreseeable damage.</p>
+<p>13.3 Towards businesses, legal entities under public law and special funds under public law, liability under section 13.2 is limited in amount to the license fee the Licensee has paid for the affected license. For fixed-term licenses, this is the fee for the twelve months preceding the event causing the damage; for perpetual licenses, the one-time license fee.</p>
+<p>13.4 For free use under section 2, the Licensor is only liable for intent, gross negligence and fraudulently concealed defects. Section 13.1 remains unaffected.</p>
+<p>13.5 Otherwise, liability is excluded, in particular for damage arising because results were shared without the review required under section 11.2. These limitations also apply in favor of the Licensor’s vicarious agents.</p>
+<h2>14. Termination</h2>
+<p>The Licensor may terminate the license for good cause, in particular in the event of a material or continued breach of section 7 that is not remedied within a reasonable period after a warning. The Licensee must then cease licensed operation.</p>
+<h2>15. Final provisions</h2>
+<p>15.1 The law of the Federal Republic of Germany applies, excluding the UN Convention on Contracts for the International Sale of Goods. For consumers, this choice of law only applies insofar as it does not deprive them of the protection of mandatory provisions of the law of their country of residence.</p>
+<p>15.2 If the Licensee is a merchant, a legal entity under public law or a special fund under public law, the exclusive place of jurisdiction is the Licensor’s registered location.</p>
+<p>15.3 Should individual provisions be invalid, the validity of the remaining provisions remains unaffected. Amendments and additions require text form.</p></main>
+<footer><span>© 2026 Robert Meyer</span><a href="impressum_eng.html">Legal notice</a><a href="datenschutz_eng.html">Privacy</a><a href="eula-server_eng.html">Server EULA</a><a href="eula-mac_eng.html">Mac EULA</a></footer>
+</body>
+</html>

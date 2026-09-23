@@ -2,128 +2,902 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KI-Anonymisierer: Anonymize data before AI tools</title>
+<meta name="description" content="Replace names, addresses and identifiers with placeholders before text lands in ChatGPT, Copilot and the like. For Mac, Windows, iPhone, iPad, Chrome and as your own server for teams and public authorities.">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="theme-color" content="#f5f2ec">
-<meta name="description" content="Anonymize text and images locally on Mac. Global shortcut, editor and optional restoration. One-time purchase from €9.99, with team licenses available.">
-<title>Anonymize text &amp; images on Mac | KI-Anonymisierer</title>
-<link rel="icon" id="page-icon" href="app-icon.png" type="image/png">
+<meta name="author" content="Robert Meyer">
+<meta name="theme-color" content="#0e1729">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KI-Anonymisierer">
+<meta property="og:url" content="https://anonymisierer-tools.de/index_eng.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="The biggest privacy problem sits between copy &amp; paste">
+<meta property="og:description" content="Replace sensitive details with placeholders before text lands in AI tools. On your device, in the browser or on your own server.">
+<meta property="og:image" content="https://anonymisierer-tools.de/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Copy and paste with a document in between, where sensitive details are highlighted and replaced by placeholders">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://anonymisierer-tools.de/img/og.jpg">
+<meta name="twitter:title" content="The biggest privacy problem sits between copy &amp; paste">
+<meta name="twitter:description" content="Replace sensitive details with placeholders before text lands in AI tools. On your device, in the browser or on your own server.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://anonymisierer-tools.de/#robert", "name": "Robert Meyer", "jobTitle": "AI consultant, author and lecturer", "image": "https://anonymisierer-tools.de/img/robert.webp", "sameAs": ["https://youtube.com/@rmkipraxis"]}, {"@type": "WebSite", "@id": "https://anonymisierer-tools.de/#website", "url": "https://anonymisierer-tools.de/", "name": "KI-Anonymisierer", "inLanguage": "en", "publisher": {"@id": "https://anonymisierer-tools.de/#robert"}}, {"@type": "WebPage", "@id": "https://anonymisierer-tools.de/index_eng.html#webpage", "url": "https://anonymisierer-tools.de/index_eng.html", "name": "KI-Anonymisierer: Anonymize data before AI tools", "isPartOf": {"@id": "https://anonymisierer-tools.de/#website"}, "inLanguage": "en", "primaryImageOfPage": "https://anonymisierer-tools.de/img/og.jpg"}, {"@type": "ItemList", "name": "KI-Anonymisierer product family", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "SoftwareApplication", "name": "KI-Anonymisierer for Mac", "operatingSystem": "macOS", "applicationCategory": "UtilitiesApplication", "url": "https://ki-anonymisierer.de/index_eng.html", "author": {"@id": "https://anonymisierer-tools.de/#robert"}, "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "EUR"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "SoftwareApplication", "name": "Anonymisierer for iPhone & iPad", "operatingSystem": "iOS, iPadOS", "applicationCategory": "UtilitiesApplication", "url": "https://ki-anonymisierer.de/ios/index_eng.html", "author": {"@id": "https://anonymisierer-tools.de/#robert"}, "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "EUR"}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "SoftwareApplication", "name": "KI-Anonymisierer for Windows", "operatingSystem": "Windows", "applicationCategory": "UtilitiesApplication", "url": "https://ki-anonymisierer.de/windows/index_eng.html", "author": {"@id": "https://anonymisierer-tools.de/#robert"}, "offers": {"@type": "Offer", "price": "14.99", "priceCurrency": "EUR"}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "SoftwareApplication", "name": "KI-Anonymisierer for Chrome", "operatingSystem": "Chrome", "applicationCategory": "BrowserApplication", "url": "https://ki-anonymisierer.de/chrome/index_eng.html", "author": {"@id": "https://anonymisierer-tools.de/#robert"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}}, {"@type": "ListItem", "position": 5, "item": {"@type": "SoftwareApplication", "name": "KI-Anonymisierer Server", "operatingSystem": "Docker, Linux", "applicationCategory": "BusinessApplication", "url": "https://anonymisierer-tools.de/apps/server_eng.html", "author": {"@id": "https://anonymisierer-tools.de/#robert"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does my text leave my computer?", "acceptedAnswer": {"@type": "Answer", "text": "Not with the apps for Mac, iPhone, iPad and Windows, or the Chrome extension without a server connection: detection runs on your device. In server mode, text is sent to your self-hosted server for analysis."}}, {"@type": "Question", "name": "Does the software detect every sensitive detail?", "acceptedAnswer": {"@type": "Answer", "text": "No automatic detection is complete. KI-Anonymisierer supports the review; checking before you share remains essential."}}, {"@type": "Question", "name": "Does this make my use automatically GDPR-compliant?", "acceptedAnswer": {"@type": "Answer", "text": "No software can promise that across the board. KI-Anonymisierer reduces personal data before text is shared. The legal assessment of your use stays with you and your data protection advisor."}}, {"@type": "Question", "name": "Do we need a server for several workstations?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily. Each workstation can use its own app. The server pays off when you want to maintain detection and custom terms centrally."}}, {"@type": "Question", "name": "How large does the server need to be?", "acceptedAnswer": {"@type": "Answer", "text": "That depends on text volume, response times and concurrent requests. In the pilot, we work out together what your setup needs."}}]}]}</script>
+<link rel="icon" href="img/icon.webp" type="image/webp">
+<link rel="stylesheet" href="fonts/fonts.css">
 <link rel="canonical" href="https://anonymisierer-tools.de/index_eng.html">
 <link rel="alternate" hreflang="de" href="https://anonymisierer-tools.de/">
 <link rel="alternate" hreflang="en" href="https://anonymisierer-tools.de/index_eng.html">
 <link rel="alternate" hreflang="x-default" href="https://anonymisierer-tools.de/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Anonymisierer-Tools">
-<meta property="og:title" content="Anonymize text &amp; images on Mac | KI-Anonymisierer">
-<meta property="og:description" content="Anonymize text and images locally on Mac. Global shortcut, editor and optional restoration. One-time purchase from €9.99, with team licenses available.">
-<meta property="og:url" content="https://anonymisierer-tools.de/index_eng.html">
-<meta property="og:image" content="https://anonymisierer-tools.de/text-original.png">
-<meta property="og:image:alt" content="Anonymize text &amp; images on Mac | KI-Anonymisierer">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Anonymize text &amp; images on Mac | KI-Anonymisierer">
-<meta name="twitter:description" content="Anonymize text and images locally on Mac. Global shortcut, editor and optional restoration. One-time purchase from €9.99, with team licenses available.">
-<meta name="twitter:image" content="https://anonymisierer-tools.de/text-original.png">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body data-product="mac">
-<svg style="display:none" aria-hidden="true"><defs>
-<symbol id="i-arrow" viewbox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"></path></symbol>
-<symbol id="i-out" viewbox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"></path></symbol>
-<symbol id="i-lock" viewbox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"></path></symbol>
-<symbol id="i-check" viewbox="0 0 24 24"><path d="m5 12 4 4 10-10"></path></symbol>
-<symbol id="i-doc" viewbox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Zm0 0v6h6M8 13h8M8 17h5"></path></symbol>
-<symbol id="i-back" viewbox="0 0 24 24"><path d="m8 4-5 5 5 5M3 9h11a6 6 0 0 1 0 12h-3"></path></symbol>
-<symbol id="i-mac" viewbox="0 0 24 24"><rect x="4" y="3" width="16" height="13" rx="1"></rect><path d="m4 16-2 4h20l-2-4M9 20h6"></path></symbol>
-<symbol id="i-phone" viewbox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 5h4M11 19h2"></path></symbol>
-<symbol id="i-browser" viewbox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18M6 6.5h.1M9 6.5h.1"></path></symbol>
-<symbol id="i-image" viewbox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8" cy="8" r="1.5"></circle><path d="m21 15-5-5L5 21"></path></symbol>
-<symbol id="i-expand" viewbox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"></path></symbol>
-<symbol id="i-windows" viewbox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></symbol>
-<symbol id="i-info" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7h.01"></path></symbol>
-</defs></svg>
-<a class="skip" href="#main">Skip to content</a>
-<header class="nav-wrap"><nav class="container nav" aria-label="Main navigation"><a class="brand" href="index_eng.html"><img id="brand-icon" src="app-icon.png" alt="" width="33" height="33">KI-Anonymisierer</a><div class="nav-links" id="navigation"><a href="#ablauf">How it works</a><a href="#app">The Mac app</a><a href="#plattformen">Platforms</a><a href="#teams">Teams</a><a href="#fragen">Questions</a></div><a class="button small quiet" href="#kaufen" aria-label="View Mac purchase options"><span class="nav-buy-full">Buy for Mac</span><span class="nav-buy-short">Buy</span> <svg aria-hidden="true"><use href="#i-out"></use></svg></a><div class="language-switch" aria-label="Language"><a href="index.html" lang="de" hreflang="de" >DE</a><a href="index_eng.html" lang="en" hreflang="en" aria-current="page">EN</a></div><button class="menu" aria-expanded="false" aria-controls="navigation" aria-label="Open menu"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></nav></header>
-<main id="main">
-<section class="container hero" id="top"><div class="hero-copy"><p class="eyebrow">For your Mac. Processed locally.</p><h1>Privacy<br><span class="light-word">between</span><br><span class="paste">Copy & Paste.</span></h1><p class="hero-lead">Replace sensitive details locally before pasting text into AI tools or other applications. Right on your Mac.</p><div class="hero-actions"><a class="button primary" href="#kaufen">Mac app · €9.99 <svg aria-hidden="true"><use href="#i-out"></use></svg></a><button class="text-link" id="try-demo">Try the workflow <svg aria-hidden="true"><use href="#i-arrow"></use></svg></button></div><div class="trust"><span><svg aria-hidden="true"><use href="#i-lock"></use></svg>Local</span><span>One-time purchase</span><span>No account</span></div><p class="hero-small">And back again, if you choose: replace placeholders in an AI response with the original details, locally.</p></div>
-<div class="demo-wrap" id="demo"><div class="demo-topline"><span><svg aria-hidden="true"><use href="#i-doc"></use></svg>ONE TEXT. THERE AND BACK AGAIN.</span><span class="try-note">Try it here ↘</span></div><div class="demo-card"><div class="demo-toolbar"><span class="toolbar-name"><svg aria-hidden="true"><use href="#i-doc"></use></svg>Your workflow</span><div class="examples" role="group" aria-label="Choose an example"><button type="button" data-example="mail" aria-pressed="true">Email</button><button type="button" data-example="note" aria-pressed="false">Note</button></div></div>
-<div class="demo-steps" role="group" aria-label="Example workflow step"><button class="step" data-step="0" aria-current="step" aria-label="Step 1: Original"><span class="number">1</span><span>Original</span></button><button class="step" data-step="1" aria-label="Step 2: Placeholders"><span class="number">2</span><span>Placeholders</span></button><button class="step" data-step="2" aria-label="Step 3: Sample response"><span class="number">3</span><span>AI response</span></button><button class="step" data-step="3" aria-label="Step 4: Restored"><span class="number">4</span><span>Restored</span></button></div>
-<div class="document"><div class="document-meta"><span id="document-label">01 / Your copied text</span><svg aria-hidden="true"><use href="#i-doc"></use></svg></div><div class="document-content" id="document-content"><p>Hello <mark>Lena Example</mark>,</p><p>we still need some documents for your case <mark>DEMO-2026-014</mark>. Could you send them by <mark>18 September 2026</mark>?</p><p>Thank you.</p></div></div>
-<p class="demo-explanation"><svg aria-hidden="true"><use href="#i-info"></use></svg><span id="step-description">A name, a reference number, a date. See what happens to these example details.</span></p><div class="demo-actions"><button class="reset" id="reset-demo" aria-label="Reset the example"><svg aria-hidden="true"><use href="#i-back"></use></svg>Start over</button><button class="button primary" id="next-step"><span>Replace details</span><svg aria-hidden="true"><use href="#i-arrow"></use></svg></button></div><div class="demo-status"><span class="status-local"><svg aria-hidden="true"><use href="#i-lock"></use></svg>Example stays in this browser</span><span>Mac: <kbd>⌘ ⇧ A</kbd> <span aria-hidden="true">→</span> <kbd>⌘ ⇧ D</kbd></span></div></div><p class="demo-disclaimer">Interactive example with fictional data. No actual AI request.</p><p class="sr-only" id="demo-announcement" aria-live="polite" aria-atomic="true"></p></div></section>
-<div id="plattform-wechsel" class="container platforms" aria-label="The product family"><p class="platform-intro"><strong>One family. Your workspace.</strong>You are viewing the Mac version.</p><a class="platform-link active" href="#app"><svg aria-hidden="true"><use href="#i-mac"></use></svg><span><strong>Mac</strong><small>In your daily workflow</small></span></a><a class="platform-link" href="ios/index_eng.html"><svg aria-hidden="true"><use href="#i-phone"></use></svg><span><strong>iPhone & iPad</strong><small>Before sharing</small></span><span class="arrow" aria-hidden="true">↗</span></a><a class="platform-link" href="chrome/index_eng.html"><svg aria-hidden="true"><use href="#i-browser"></use></svg><span><strong>Chrome</strong><small>Free extension</small></span><span class="arrow" aria-hidden="true">↗</span></a><a class="platform-link" href="windows/index_eng.html"><svg aria-hidden="true"><use href="#i-windows"></use></svg><span><strong>Windows</strong><small>New on the Microsoft Store</small></span><span class="arrow" aria-hidden="true">↗</span></a></div>
-
-<section class="container section" id="ablauf"><div class="section-top"><div><p class="eyebrow">A small step before pasting.</p><h2>Your work continues.<br>The real names take a break.</h2></div><p>Rewrite an email, summarize a note, prepare a draft. KI-Anonymisierer fits into the workflow where you already copy and paste.</p></div><div class="benefits"><article class="benefit"><div class="benefit-head"><svg aria-hidden="true"><use href="#i-doc"></use></svg><h3>Replace details.</h3></div><p>Detected names, addresses and other details become placeholders. The text stays readable, so you can check it before sharing.</p></article><article class="benefit"><div class="benefit-head"><svg aria-hidden="true"><use href="#i-back"></use></svg><h3>Restore the response.</h3></div><p>With restoration enabled, you can put the original details back locally. The mapping is kept in memory for a limited time only.</p></article><article class="benefit"><div class="benefit-head"><svg aria-hidden="true"><use href="#i-image"></use></svg><h3>Check images too.</h3></div><p>Clean up screenshots and images in the Mac app. Review detected areas and manually edit anything that was missed.</p></article></div><div class="workflow-strip" aria-label="The workflow on your Mac"><div><kbd>⌘ C</kbd><strong>Copy text</strong><p>From an email, a note or a document.</p></div><div><kbd>⌘ ⇧ A</kbd><strong>Replace details</strong><p>Start local processing with a shortcut.</p></div><div><kbd>⌘ V</kbd><strong>Check and paste</strong><p>Review the result and use it in your work.</p></div><div><kbd>⌘ ⇧ D</kbd><strong>Restore when needed</strong><p>With restoration enabled and the mapping still available.</p></div></div></section>
-<section class="product-section" id="app"><div class="container product-layout"><div class="product-copy"><p class="eyebrow">The actual Mac app.</p><h2>Everything in view.<br>Everything under your control.</h2><p id="product-description">Original and result, side by side. See which details were replaced before using the text elsewhere.</p><div class="product-tabs" role="tablist" aria-label="App view"><button role="tab" id="tab-text" aria-controls="product-panel" aria-selected="true" data-shot="text">Edit text</button><button role="tab" id="tab-image" aria-controls="product-panel" aria-selected="false" tabindex="-1" data-shot="image">Clean up images</button></div><p class="shot-note">Original screenshots of the Mac app.<br>Click the image to enlarge it.</p></div><figure class="product-visual" id="product-panel" role="tabpanel" aria-labelledby="tab-text"><button class="shot-button" id="open-shot" aria-label="Enlarge the Mac app text view"><span class="app-crop"><img id="app-shot" src="text-original.png" width="2880" height="1800" alt="Mac text editor showing the original and anonymized text side by side" loading="lazy"></span><span class="enlarge"><svg aria-hidden="true"><use href="#i-expand"></use></svg>Enlarge image</span></button><figcaption class="shot-caption" id="shot-caption">Text view · Detail from the original product screenshot</figcaption></figure></div></section>
-<div class="container"><div class="control-note"><svg aria-hidden="true"><use href="#i-info"></use></svg><p><strong>The final check is yours.</strong> Automatic detection can miss details. Review the result before sharing. Restoration uses a local mapping and is a form of pseudonymization.</p></div></div>
-<section class="container section pricing" id="kaufen"><div class="pricing-copy"><p class="eyebrow">For your next copy-and-paste moment.</p><h2>Buy once.<br>Keep it close at hand.</h2><p>A local tool for sensitive text and images. No registration and no recurring subscription.</p><div class="native-line"><svg aria-hidden="true"><use href="#i-mac"></use></svg>Native Mac app · macOS 14 or later</div></div><div class="purchase"><div class="purchase-head"><div class="purchase-brand"><img data-app-icon src="app-icon.png" alt="" width="36" height="36">KI-Anonymisierer</div><span class="license-note">For macOS</span></div><p class="price">9.99<span>€</span></p><p class="price-detail">One-time purchase · Individual Mac license</p><ul><li><svg aria-hidden="true"><use href="#i-check"></use></svg>Edit text and images locally</li><li><svg aria-hidden="true"><use href="#i-check"></use></svg>Global shortcut and editor</li><li><svg aria-hidden="true"><use href="#i-check"></use></svg>Optional placeholder restoration</li></ul><a class="button primary" href="https://apps.apple.com/us/app/ki-anonymisierer/id6760411603?mt=12" target="_blank" rel="noopener noreferrer">View on the Mac App Store <svg aria-hidden="true"><use href="#i-out"></use></svg></a><a class="direct-link lemonsqueezy-button" href="https://ki-fachbuecher.lemonsqueezy.com/checkout/buy/76a8cd83-9858-4888-b082-b2a51296de9f?embed=1" data-checkout="single">Or buy directly</a><p class="smallprint">The iPhone/iPad app is a separate purchase. The price shown by the respective provider applies.</p></div></section>
-<section class="container teams" id="teams" aria-labelledby="teams-title"><div class="teams-heading"><h2 id="teams-title">Work on your own.<br>Or with your whole team.</h2><p>Buy the Mac app directly through Lemon Squeezy. Choose the right number of licenses for yourself, your office or your organization.</p></div><div class="license-grid"><article class="license-option"><h3>1 license</h3><p>For one individual.</p><p class="license-price">€9.99</p><a class="button quiet lemonsqueezy-button" href="https://ki-fachbuecher.lemonsqueezy.com/checkout/buy/76a8cd83-9858-4888-b082-b2a51296de9f?embed=1" data-checkout="single">Buy an individual license</a></article><article class="license-option"><h3>10 licenses</h3><p>For teams and small offices.</p><p class="license-price">€79.90</p><a class="button primary lemonsqueezy-button" href="https://ki-fachbuecher.lemonsqueezy.com/checkout/buy/f69f289c-85a2-440d-85bd-d532d741baf9?embed=1" data-checkout="team">Buy 10 licenses</a></article><article class="license-option"><h3>25+ licenses</h3><p>For organizations, law firms and public authorities.</p><p class="license-price">On request</p><a class="button quiet" href="#anfrage" data-request="Volume license: 25+ users">Request a volume quote</a></article></div><p class="purchase-legal">By purchasing, you accept the <a data-legal="eula" href="eula_eng.html">EULA</a>. Apple’s terms also apply to purchases through the Mac App Store. Direct purchases are handled by Lemon Squeezy outside the App Store. The final charge may vary slightly depending on tax country, payment method and currency conversion. The price displayed at checkout applies.</p><p class="checkout-status" id="checkout-status" role="status"></p><noscript><p class="purchase-legal">Without JavaScript, purchase links open the checkout as a page.</p></noscript></section>
-<section class="container family-section" id="plattformen" aria-labelledby="family-title"><div class="section-top"><div><p class="eyebrow">Wherever else you work.</p><h2 id="family-title">One idea.<br>Several workspaces.</h2></div><p>This page focuses on the Mac app. There are dedicated tools for mobile content, the browser and Windows.</p></div><div class="family-grid"><article class="family-product"><svg aria-hidden="true"><use href="#i-phone"></use></svg><h3>iPhone & iPad</h3><p class="availability">Native app · Separate purchase</p><p>Edit text, photos and screenshots before sharing. Right on your iPhone or iPad, including through the share sheet.</p><a class="button quiet" href="ios/index_eng.html">Explore the iPhone/iPad app <svg aria-hidden="true"><use href="#i-out"></use></svg></a></article><article class="family-product"><svg aria-hidden="true"><use href="#i-browser"></use></svg><h3>Chrome</h3><p class="availability">Extension · Free</p><p>Replace sensitive details in text right in your browser. For anyone preparing their next piece of text on the web.</p><a class="button quiet" href="chrome/index_eng.html">Explore the Chrome extension <svg aria-hidden="true"><use href="#i-out"></use></svg></a></article><article class="family-product" id="windows"><svg aria-hidden="true"><use href="#i-windows"/></svg><h3>Windows</h3><p class="availability">Native app · One-time purchase</p><p>Check text on your own Windows PC and replace detected details with placeholders. With tray icon, keyboard shortcut and optional local AI. German interface.</p><a class="button quiet" href="windows/index_eng.html">Explore the Windows app <svg aria-hidden="true"><use href="#i-out"/></svg></a></article></div><p class="family-license-note">The Mac license covers the Mac app. iPhone/iPad and Windows are separate purchases; the Chrome extension is free.</p></section>
-<section class="container section faq" id="fragen"><div><p class="eyebrow">Good to know.</p><h2>One more question<br>before you paste?</h2></div><div class="faq-list"><details><summary>What happens to my text?</summary><p>Anonymization takes place locally on your Mac. The app prepares text before you paste it into an AI service or another application yourself. Processing by that other service is separate.</p></details><details><summary>How does restoration work?</summary><p>When restoration is enabled, the app keeps the mapping between details and placeholders for the most recent session in memory. It is deleted after no more than five minutes. Restoration is only possible while the matching mapping is still available.</p></details><details><summary>Does the demo use the actual anonymization engine?</summary><p>The preview above illustrates the workflow using two prepared examples. It does not process your documents or call an AI. Detection in the native Mac app can differ; results must be reviewed.</p></details><details><summary>Is the app available for other devices?</summary><p>There is a separate app for <a href="ios/index_eng.html">iPhone and iPad</a> . The <a href="chrome/index_eng.html">Chrome extension</a> is free. For <a href="windows/index_eng.html">Windows</a>, there is a separate app on the Microsoft Store.</p></details><details><summary>Can I use the app on several Macs?</summary><p>The individual license covers one person. It allows installation on devices predominantly used by that person. For multiple people, there are <a href="#teams">team and volume licenses</a>. See the details in the <a data-legal="eula" href="eula_eng.html">EULA</a>.</p></details><details><summary>Do I need Apple Intelligence?</summary><p>The app requires macOS 14 or later. Apple Intelligence optionally supplements local detection when available on your device. The app can also be used without it.</p></details></div></section>
-<section class="container contact" id="kontakt"><div class="contact-copy"><p class="eyebrow">Directly to the developer.</p><h2>Your team.<br>Your use case.</h2><p>Need more licenses or have a question about your setup? Write to Robert Meyer. For general questions, you can also reach me at <a href="mailto:rm@kostenmanager.net">rm@kostenmanager.net</a>.</p></div><div><details id="anfrage" open><summary>Team or platform inquiry</summary><form data-contact="request"><div class="form-row"><label for="request-name">Name (optional)</label><input id="request-name" name="name" autocomplete="name" maxlength="150"></div><div class="form-row"><label for="request-email">Email</label><input id="request-email" name="email" type="email" autocomplete="email" required maxlength="254"></div><div class="form-row"><label for="request-platform">Request or requirements (optional)</label><textarea id="request-platform" name="platform" maxlength="3000" placeholder="For example: 25 licenses for our firm"></textarea></div><div class="form-trap" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><p class="form-note">Your details will be sent to Robert Meyer to handle your inquiry. <a data-legal="datenschutz" href="datenschutz_eng.html">Privacy</a></p><button type="submit" class="button primary" disabled>Send inquiry</button><p class="form-status" role="status"></p></form></details><details id="updates"><summary>Updates / newsletter</summary><form data-contact="updates"><p class="form-note">Product updates about new versions and improvements by email.</p><div class="form-row"><label for="updates-name">Name (optional)</label><input id="updates-name" name="name" autocomplete="name" maxlength="150"></div><div class="form-row"><label for="updates-email">Email</label><input id="updates-email" name="email" type="email" autocomplete="email" required maxlength="254"></div><div class="form-trap" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><p class="form-note">By choosing “Request updates”, you ask to receive these emails. Your details will be sent to Robert Meyer. <a data-legal="datenschutz" href="datenschutz_eng.html">Privacy</a></p><button type="submit" class="button primary" disabled>Request updates</button><p class="form-status" role="status"></p></form></details><noscript>Please enable JavaScript to submit, or email <a href="mailto:rm@kostenmanager.net">rm@kostenmanager.net</a>.</noscript></div></section>
-</main>
-<footer class="container footer"><div class="footer-top"><span>© 2026 Robert Meyer · Anonymisierer-Tools</span><div class="footer-links"><a data-legal="impressum" href="impressum_eng.html">Legal notice</a><a data-legal="datenschutz" href="datenschutz_eng.html">Privacy</a><a data-legal="eula" href="eula_eng.html">EULA</a><button type="button" data-privacy-settings>Privacy settings</button><a href="#kontakt">Contact</a><a href="#updates" data-open-updates>Updates</a><a href="https://youtube.com/@rmkipraxis?si=h2qNroeG7EqviRwE" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://ki-anonymisierer.de/webdemo/" target="_blank" rel="noopener noreferrer">Web demo ↗</a><a href="#top">Back to top ↑</a></div></div></footer>
-<dialog class="legal-popup" id="legal-dialog" aria-labelledby="legal-title"><div class="dialog-head"><h2 id="legal-title">Legal information</h2><button class="close" id="close-legal" type="button" aria-label="Close legal document">×</button></div><iframe id="legal-frame" title="Legal document" referrerpolicy="no-referrer"></iframe></dialog>
-<dialog id="shot-dialog" aria-labelledby="shot-title"><div class="dialog-head"><h2 id="shot-title">Text editing in the Mac app</h2><button class="close" id="close-shot" aria-label="Close image">×</button></div><img class="dialog-image" id="dialog-image" width="2880" height="1800" alt="Full original product screenshot of text editing"><p class="dialog-caption">Full original screenshot from ki-anonymisierer.de. The image on the page shows a detail.</p></dialog>
-<script>
-'use strict';
-const appIcon=document.querySelector('#brand-icon').src;
-document.querySelector('#page-icon').href=appIcon;
-document.querySelector('[data-app-icon]').src=appIcon;
-const examples={
- mail:{label:"Email",values:{person:"Lena Example",case:'DEMO-2026-014',date:"18 September 2026"},original:["Hello {person},","we still need some documents for your case {case}. Could you send them by {date}?","Thank you."],response:["Hello {person},","To process your case {case}, we need the remaining documents. Please send them by {date}.","Thank you for your help."]},
- note:{label:"Note",values:{person:"Tom Sample",case:'DEMO-2026-028',date:"22 September 2026"},original:["Note from the conversation with {person}:","{person} will provide the missing details by {date}. The reply belongs to case {case}."],response:["Conversation note · {case}","{person} will supply the missing details by {date}. The case remains open until then."]}
-};
-const placeholders={person:"[Person 1]",case:"[Reference 1]",date:"[Date 1]"};
-const descriptions=[
- "A name, a reference number, a date. See what happens to these example details.",
- "The highlighted details have been replaced. Review the text before using it in another system.",
- "This is what a revised response could look like. This sample response is prepared; no actual AI is called.",
- "The original details are back in the draft. In the Mac app, this works when restoration is enabled and the mapping is still available."
-];
-const labels=["01 / Your copied text","02 / Continue with placeholders","03 / Prepared sample response","04 / Back to your original details"];
-const actions=["Replace details","View sample response","Restore original details","Try again"];
-let step=0,example='mail';
-const output=document.querySelector('#document-content'),next=document.querySelector('#next-step');
-function renderDemo(announce=true){
- const data=examples[example],prepared=step===1||step===2;
- const paragraphs=step>=2?data.response:data.original;
- output.replaceChildren();
- paragraphs.forEach(text=>{
-  const p=document.createElement('p');
-  text.split(/(\{(?:person|case|date)\})/g).filter(Boolean).forEach(part=>{
-   const match=part.match(/^\{(person|case|date)\}$/);
-   if(match){const mark=document.createElement('mark');mark.textContent=prepared?placeholders[match[1]]:data.values[match[1]];p.append(mark)}
-   else p.append(document.createTextNode(part));
-  });output.append(p);
- });
- output.classList.toggle('is-prepared',prepared);output.classList.toggle('is-restored',step===3);
- document.querySelector('#document-label').textContent=labels[step];
- document.querySelector('#step-description').textContent=descriptions[step];
- next.querySelector('span').textContent=actions[step];
- next.querySelector('use').setAttribute('href',step===2?'#i-back':'#i-arrow');
- document.querySelectorAll('[data-step]').forEach(button=>{const index=Number(button.dataset.step);button.classList.toggle('complete',index<step);if(index===step)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current')});
- document.querySelectorAll('[data-example]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.example===example)));
- if(announce)document.querySelector('#demo-announcement').textContent=data.label+'. '+labels[step]+'. '+descriptions[step];
+<style>
+:root{
+  --night:#0e1729;
+  --night-2:#17233b;
+  --night-3:#223252;
+  --mist:#9eabc2;
+  --fog:#c9d2e2;
+  --paper:#eef0f3;
+  --sheet:#f9fafb;
+  --ink:#0e1729;
+  --muted:#5a6579;
+  --line:#d4d9e1;
+  --marker:#f5d94a;
+  --marker-soft:#fbefa6;
+  --place:#4d74ff;
+  --place-soft:#e2e8ff;
+  --ok:#3ccf8e;
+  --sans:"Schibsted Grotesk",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --ease:cubic-bezier(.22,.8,.2,1);
 }
-next.addEventListener('click',()=>{step=(step+1)%4;renderDemo()});
-document.querySelector('#reset-demo').addEventListener('click',()=>{step=0;renderDemo()});
-document.querySelectorAll('[data-step]').forEach(button=>button.addEventListener('click',()=>{step=Number(button.dataset.step);renderDemo()}));
-document.querySelectorAll('[data-example]').forEach(button=>button.addEventListener('click',()=>{example=button.dataset.example;step=0;renderDemo()}));
-document.querySelector('#try-demo').addEventListener('click',()=>{document.querySelector('#demo').scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});next.focus({preventScroll:true})});
-const shots={text:{src:document.querySelector('#app-shot').src,title:"Text editing in the Mac app",alt:"Mac text editor showing the original and anonymized text side by side",caption:"Text view · Detail from the original product screenshot",description:"Original and result, side by side. See which details were replaced before using the text elsewhere."},image:{src:'bild-original.png',title:"Image editing in the Mac app",alt:"Image view in the Mac app with a preview and editing tools",caption:"Image view · Detail from the original product screenshot",description:"Detect and review sensitive areas in screenshots. Anything missed can be edited manually in the app."}};
-let currentShot='text';const tabs=[...document.querySelectorAll('[data-shot]')];
-function selectShot(key){currentShot=key;const shot=shots[key];tabs.forEach(tab=>{const selected=tab.dataset.shot===key;tab.setAttribute('aria-selected',String(selected));tab.tabIndex=selected?0:-1});document.querySelector('#product-panel').setAttribute('aria-labelledby',key==='text'?'tab-text':'tab-image');const image=document.querySelector('#app-shot');image.src=shot.src;image.alt=shot.alt;document.querySelector('#shot-caption').textContent=shot.caption;document.querySelector('#product-description').textContent=shot.description;document.querySelector('#open-shot').setAttribute('aria-label',shot.title+" — enlarge")}
-tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>selectShot(tab.dataset.shot));tab.addEventListener('keydown',event=>{let target;if(event.key==='ArrowRight'||event.key==='ArrowLeft')target=tabs[(index+1)%2];if(event.key==='Home')target=tabs[0];if(event.key==='End')target=tabs[1];if(target){event.preventDefault();selectShot(target.dataset.shot);target.focus({preventScroll:true})}})});
-const dialog=document.querySelector('#shot-dialog');
-document.querySelector('#open-shot').addEventListener('click',()=>{const shot=shots[currentShot];document.querySelector('#shot-title').textContent=shot.title;document.querySelector('#dialog-image').src=shot.src;document.querySelector('#dialog-image').alt=shot.alt;dialog.showModal()});
-document.querySelector('#close-shot').addEventListener('click',()=>dialog.close());
-dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const b=dialog.getBoundingClientRect();if(event.clientX<b.left||event.clientX>b.right||event.clientY<b.top||event.clientY>b.bottom)dialog.close()});
-renderDemo(false);
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:#fff;font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--marker);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1200px,calc(100% - 32px));margin-inline:auto}
+.skip{position:fixed;left:-999px;top:8px;background:#fff;color:var(--ink);padding:8px 12px;border-radius:6px;z-index:60}
+.skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.nav{position:fixed;inset:0 0 auto;z-index:40;transition:background .3s,color .3s,box-shadow .3s}
+.nav .wrap{display:flex;align-items:center;gap:26px;min-height:66px}
+.nav.scrolled{background:rgba(14,23,41,.72);backdrop-filter:saturate(1.5) blur(14px);-webkit-backdrop-filter:saturate(1.5) blur(14px)}
+.nav.light{color:var(--ink)}
+.nav.light.scrolled{background:rgba(238,240,243,.8);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;text-decoration:none}
+.brand img{width:28px;height:28px;border-radius:7px}
+.nav-links{display:flex;gap:24px;margin-left:auto;font-size:15px}
+.nav-links a{text-decoration:none;opacity:.72}
+.nav-links a:hover{opacity:1}
+.lang{font-size:13px;text-decoration:none;border:1px solid currentColor;border-radius:999px;padding:4px 10px;opacity:.6}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font:600 16px/1 var(--sans);text-decoration:none;border:0;cursor:pointer;transition:transform .2s var(--ease),background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-marker{background:var(--marker);color:var(--ink)}
+.btn-ghost{color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn-ink{background:var(--ink);color:#fff}
+.nav .btn{min-height:38px;padding:0 16px;font-size:14px}
+
+.scene{position:relative}
+.sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+
+#hero{height:320vh;height:320svh;background:radial-gradient(120% 80% at 50% 110%,#1d2c4d 0%,var(--night) 60%)}
+.hero-stage{display:grid;place-items:center}
+.hero-top{position:absolute;top:calc(66px + 7svh);left:0;right:0;text-align:center;font-size:clamp(20px,2.4vw,30px);font-weight:600;letter-spacing:-.02em;color:var(--fog);padding:0 16px}
+.hero-top b{color:#fff;font-weight:700}
+.words{position:absolute;left:50%;top:52%;display:flex;align-items:baseline;gap:.22em;transform:translate(-50%,-50%);font-weight:900;font-size:min(15vw,26svh);line-height:.9;letter-spacing:-.055em;white-space:nowrap}
+.word{display:inline-block;will-change:transform;transform-origin:center}
+.amp{color:var(--marker);font-weight:800}
+.card{position:absolute;left:50%;top:52%;width:min(560px,40vw);transform:translate(-50%,-50%) scale(.7);opacity:0;background:#fff;color:var(--ink);border-radius:18px;box-shadow:0 40px 120px -30px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.08);will-change:transform,opacity}
+.card-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.card-head b{color:var(--ink);font-weight:600;display:flex;align-items:center;gap:8px}
+.card-head b img{width:18px;height:18px;border-radius:5px}
+.kbd{display:inline-flex;gap:3px}
+.kbd kbd{font:600 11px/1 var(--sans);padding:5px 6px;border-radius:5px;background:var(--paper);box-shadow:inset 0 -2px 0 var(--line)}
+.card-body{padding:20px 20px 16px;font:400 clamp(13px,1.15vw,15.5px)/1.85 var(--mono)}
+.sw{display:inline-grid;vertical-align:bottom}
+.sw>span{grid-area:1/1;border-radius:4px;padding:0 2px;transition:opacity .35s,background .35s,color .35s}
+.sw .n{opacity:0;background:var(--place);color:#fff;text-align:center}
+.sw.hit .o{background:var(--marker)}
+.sw.done .o{opacity:0}
+.sw.done .n{opacity:1}
+.card-foot{display:flex;justify-content:space-between;gap:12px;padding:12px 18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.card-foot .count{font-weight:700;color:var(--ink)}
+.hero-end{position:absolute;left:0;right:0;bottom:calc(6svh + env(safe-area-inset-bottom));display:grid;justify-items:center;gap:18px;text-align:center;padding:0 16px;opacity:0;transform:translateY(20px)}
+.hero-end p{margin:0;font-size:clamp(17px,1.5vw,20px);color:var(--fog);max-width:56ch}
+.hero-end .row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.hint{position:absolute;left:50%;bottom:calc(4svh + env(safe-area-inset-bottom));transform:translateX(-50%);display:grid;justify-items:center;gap:8px;font-size:13px;color:var(--mist)}
+.hint i{width:22px;height:34px;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--mist);position:relative}
+.hint i::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;border-radius:2px;background:var(--mist);transform:translateX(-50%);animation:wheel 1.8s var(--ease) infinite}
+@keyframes wheel{0%{opacity:0;transform:translate(-50%,0)}30%{opacity:1}100%{opacity:0;transform:translate(-50%,10px)}}
+
+#story{height:220vh;height:220svh;background:var(--night)}
+.story-stage{display:grid;place-items:center}
+.story-grid{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:64px;align-items:center;width:min(1240px,calc(100% - 40px));padding-top:40px}
+.portrait{margin:0;position:relative;border-radius:22px;overflow:hidden;aspect-ratio:2/3;max-height:74svh;box-shadow:0 40px 90px -30px rgba(0,0,0,.8);opacity:0;will-change:transform,opacity}
+.portrait img{width:100%;height:100%;object-fit:cover;transform:scale(var(--pz,1.15));will-change:transform}
+.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,23,41,.55))}
+.portrait figcaption{position:absolute;left:18px;bottom:16px;z-index:1;font-size:14px;color:#fff}
+.cite img{display:none;width:52px;height:52px;border-radius:50%}
+.quote{margin:0;font-size:clamp(26px,3.3vw,50px);line-height:1.14;letter-spacing:-.03em;font-weight:700}
+.quote .w{opacity:.16;transition:opacity .25s}
+.quote .w.on{opacity:1}
+.quote .mk{background:linear-gradient(var(--marker),var(--marker)) no-repeat 0 88%/0% 38%;transition:background-size .8s var(--ease)}
+.quote .mk.on{background-size:100% 38%}
+.cite{display:flex;align-items:center;gap:14px;margin-top:36px;font-size:16px;color:var(--mist);opacity:0;transition:opacity .5s}
+.cite.on{opacity:1}
+.cite strong{color:#fff;font-weight:600}
+.cite span{width:40px;height:2px;background:var(--marker)}
+
+#family{height:560vh;height:560svh;background:linear-gradient(180deg,var(--night) 0%,#101b31 100%)}
+.fam{display:grid;grid-template-columns:minmax(300px,.8fr) 1.4fr;gap:40px;align-items:center;width:min(1280px,calc(100% - 40px));margin:auto;height:100%;padding-top:66px}
+.fam-left{display:grid;gap:28px;align-content:center}
+.fam-kicker{font-size:15px;color:var(--mist);margin:0}
+.fam-title{font-size:clamp(30px,3.4vw,48px);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin:6px 0 0}
+.dial-stage{position:relative;width:min(300px,34svh);aspect-ratio:1;perspective:1100px;margin-left:10px}
+.dial-marker{position:absolute;left:50%;top:-4px;width:2px;height:26px;background:linear-gradient(var(--marker),transparent);transform:translateX(-50%);z-index:3}
+.dial{position:absolute;inset:0;transform:rotateX(58deg) rotateZ(var(--rot,0deg));transform-style:preserve-3d;will-change:transform}
+.dial svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 30px 30px rgba(0,0,0,.5))}
+.seg{fill:rgba(255,255,255,.05);stroke:rgba(255,255,255,.16);transition:fill .3s}
+.seg.on{fill:rgba(245,217,74,.9)}
+.seg-label{fill:var(--mist);font:600 13px var(--sans);transition:fill .3s}
+.seg-label.on{fill:var(--ink)}
+.dial-hub{position:absolute;left:50%;top:50%;width:30%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%) rotateX(58deg);background:radial-gradient(circle at 35% 30%,#2f4470,var(--night-2));box-shadow:0 12px 24px rgba(0,0,0,.4),inset 0 0 0 1px rgba(255,255,255,.12);display:grid;place-items:center}
+.dial-hub img{width:44%;border-radius:22%;transform:rotateX(-58deg)}
+.dial-btns{position:absolute;inset:0;z-index:4}
+.dial-btns button{position:absolute;width:44px;height:44px;border:0;background:transparent;border-radius:50%;cursor:pointer;transform:translate(-50%,-50%)}
+.stations{position:relative;height:230px}
+.station{position:absolute;inset:0;opacity:0;transform:translateY(16px);transition:opacity .35s,transform .45s var(--ease);pointer-events:none}
+.station.on{opacity:1;transform:none;pointer-events:auto}
+.station .step{font:500 13px var(--mono);color:var(--marker)}
+.station h3{font-size:clamp(28px,2.6vw,38px);letter-spacing:-.03em;line-height:1.05;margin:8px 0 10px}
+.station p{margin:0;color:var(--fog);font-size:16.5px;max-width:42ch}
+.station .buy{display:flex;align-items:center;gap:18px;margin-top:18px;font-weight:700}
+.station .buy a{font-weight:600;color:var(--marker);text-decoration:none;font-size:15px}
+.station .buy a:hover{text-decoration:underline}
+.devices{position:relative;height:min(64svh,620px);perspective:1800px}
+.device{position:absolute;inset:0;display:grid;place-items:center;will-change:transform,opacity;transform-style:preserve-3d}
+.laptop{width:min(100%,760px)}
+.lid{position:relative;border-radius:20px 20px 4px 4px;background:#1b1c20;padding:1.5% 1.5% 2.2%;box-shadow:0 0 0 1.5px #45474e,0 50px 90px -30px rgba(0,0,0,.8)}
+.lid::before{content:"";position:absolute;top:.55%;left:50%;width:9%;height:2.2%;border-radius:0 0 8px 8px;background:#0b0b0d;transform:translateX(-50%);z-index:2}
+.screen{position:relative;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:radial-gradient(90% 90% at 20% 10%,#3b5da8 0%,#1c2a55 45%,#0c1224 100%)}
+.screen .win{position:absolute;left:50%;top:53%;width:74%;transform:translate(-50%,-50%);border-radius:10px;box-shadow:0 30px 60px rgba(0,0,0,.55)}
+.menubar{position:absolute;top:0;left:0;right:0;height:3.6%;background:rgba(10,14,25,.45);display:flex;justify-content:flex-end;align-items:center;gap:2%;padding:0 2%;font-size:9px;color:rgba(255,255,255,.8)}
+.menubar i{width:1.4%;aspect-ratio:1;border-radius:3px;background:var(--place);box-shadow:0 0 8px var(--place)}
+.base{position:relative;height:clamp(10px,1.8vw,16px);width:113%;margin-left:-6.5%;border-radius:2px 2px 16px 16px/2px 2px 10px 10px;background:linear-gradient(#e2e4e8,#a9adb5 60%,#80848c)}
+.base::before{content:"";position:absolute;left:50%;top:0;width:16%;height:40%;background:#9da1a9;border-radius:0 0 10px 10px;transform:translateX(-50%)}
+.monitor{width:min(100%,780px);display:grid;justify-items:center}
+.mon-screen{width:100%;border-radius:16px;background:#e9eaed;padding:1.4%;box-shadow:0 50px 90px -30px rgba(0,0,0,.8)}
+.mon-screen img{border-radius:6px;width:100%;aspect-ratio:1600/798;object-fit:cover}
+.mon-neck{width:18%;height:52px;background:linear-gradient(90deg,#b9bcc3,#e3e5e9,#b0b3ba);clip-path:polygon(14% 0,86% 0,100% 100%,0 100%)}
+.mon-foot{width:30%;height:10px;border-radius:6px;background:linear-gradient(#d9dbe0,#9ea2aa)}
+.combo{position:relative;width:min(100%,700px)}
+.ipad{border-radius:5.5%/7.3%;background:#18191c;padding:2.6%;box-shadow:0 0 0 1.5px #3f4148,0 50px 90px -30px rgba(0,0,0,.8)}
+.ipad img{border-radius:2.2%/2.9%;aspect-ratio:4/3;object-fit:cover}
+.iphone{position:absolute;right:-6%;bottom:-8%;width:25%;border-radius:17%/8%;background:#18191c;padding:2.2%;box-shadow:0 0 0 1.5px #474950,0 30px 60px -10px rgba(0,0,0,.8)}
+.iphone img{border-radius:14%/6.6%;aspect-ratio:700/1521;object-fit:cover}
+.iphone::before{content:"";position:absolute;top:4%;left:50%;width:30%;height:3.2%;background:#000;border-radius:999px;transform:translateX(-50%);z-index:2}
+.pc .lid{border-radius:12px 12px 3px 3px;background:#0b0c0f;padding:1.2% 1.2% 1.8%;box-shadow:0 0 0 1.5px #2c2f36,0 50px 90px -30px rgba(0,0,0,.8)}
+.pc .lid::before{display:none}
+.pc .screen{aspect-ratio:16/9;background:#000}
+.pc .screen img{width:100%;height:100%;object-fit:cover}
+.pc .base{background:linear-gradient(#5a5f69,#34373e 60%,#1f2126)}
+.pc .base::before{background:#2a2d33}
+.server{width:min(100%,720px)}
+.server svg{width:100%;height:auto;overflow:visible}
+.flow{stroke-dasharray:4 7;animation:flow 1.2s linear infinite}
+.flow.back{animation-direction:reverse}
+@keyframes flow{to{stroke-dashoffset:-22}}
+.led{animation:blink 2.4s steps(2) infinite}
+@keyframes blink{50%{opacity:.25}}
+
+.light{background:var(--paper);color:var(--ink)}
+.section{padding:120px 0}
+.kicker{font-size:15px;color:var(--muted);margin:0 0 14px}
+h2{font-size:clamp(34px,4.6vw,64px);line-height:1.02;letter-spacing:-.04em;font-weight:800;margin:0;max-width:17ch}
+.lead{font-size:19px;color:var(--muted);max-width:60ch;margin:22px 0 0}
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
+.way{background:#fff;border-radius:24px;padding:30px;box-shadow:0 0 0 1px var(--line);display:flex;flex-direction:column}
+.way.dark{background:var(--night);color:#fff;box-shadow:none}
+.way h3{font-size:26px;letter-spacing:-.03em;margin:0 0 6px;line-height:1.1}
+.way .sub{margin:0 0 22px;color:var(--muted);font-size:15.5px}
+.way.dark .sub{color:var(--mist)}
+.way ul{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:0}
+.way li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:15.5px}
+.way.dark li{border-top-color:var(--night-3)}
+.way li b{white-space:nowrap}
+.way li a{text-decoration:none}
+.way li a:hover{text-decoration:underline}
+.way .btn{margin-top:auto;align-self:flex-start}
+.way .note{font-size:13.5px;color:var(--mist);margin:-10px 0 22px}
+
+#team{height:210vh;height:210svh;background:var(--night)}
+.team-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(var(--tz,1.25));will-change:transform}
+.team-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,23,41,.88) 0%,rgba(14,23,41,.55) 45%,rgba(14,23,41,.1) 75%),linear-gradient(0deg,rgba(14,23,41,var(--td,0)),rgba(14,23,41,var(--td,0)))}
+.team-copy{position:absolute;left:max(20px,calc((100% - 1200px)/2));bottom:12svh;max-width:min(620px,calc(100% - 40px));opacity:0;transform:translateY(30px);will-change:transform,opacity}
+.team-copy .kicker{color:var(--marker)}
+.team-copy h2{color:#fff;max-width:16ch}
+.team-copy p{color:var(--fog);font-size:19px;margin:20px 0 0;max-width:46ch}
+#org{height:280vh;height:280svh;background:var(--night)}
+.org-viz{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.8)}
+.org-viz img{width:100%;clip-path:inset(0 var(--clip,100%) 0 0);will-change:clip-path}
+.org-viz::after{content:"";position:absolute;inset:0;border-radius:22px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);pointer-events:none}
+.org{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;width:min(1240px,calc(100% - 40px));margin:auto;height:100%;padding-top:66px}
+.org h2{color:#fff}
+.org .lead{color:var(--fog)}
+.org-points{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:12px}
+.org-points li{display:grid;grid-template-columns:14px 1fr;gap:12px;font-size:16px;color:var(--fog);opacity:.25;transform:translateX(-8px);transition:opacity .4s,transform .5s var(--ease)}
+.org-points li.on{opacity:1;transform:none}
+.org-points li::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--marker);margin-top:8px}
+.org-points b{color:#fff;font-weight:600}
+.org-counter{font:800 clamp(56px,7vw,110px)/1 var(--sans);letter-spacing:-.05em;color:#fff}
+.org-counter small{display:block;font:500 15px var(--sans);letter-spacing:0;color:var(--mist);margin-top:8px}
+.honest{margin-top:22px;font-size:14px;color:var(--mist);border-left:2px solid var(--place);padding-left:12px}
+.org-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+
+.prices{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;border-radius:24px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+.tier{background:#fff;padding:32px 28px;display:flex;flex-direction:column}
+.tier+.tier{border-left:1px solid var(--line)}
+.tier h3{margin:0;font-size:24px;letter-spacing:-.02em}
+.tier .for{margin:6px 0 22px;font-size:15px;color:var(--muted)}
+.tier ul{list-style:none;margin:0 0 26px;padding:0}
+.tier li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:15.5px}
+.tier li b{white-space:nowrap}
+.tier .btn{margin-top:auto;align-self:flex-start}
+.tier.dark{background:var(--night);color:#fff}
+.tier.dark .for{color:var(--mist)}
+.tier.dark li{border-top-color:var(--night-3)}
+
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+details{border-bottom:1px solid var(--line)}
+details:first-child{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-weight:600;font-size:18px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:400;font-size:24px;line-height:1;color:var(--muted)}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 22px;color:var(--muted);max-width:62ch}
+
+.contact{background:var(--night);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact .lead{color:var(--fog)}
+form{display:grid;gap:14px}
+label{font-size:14px;color:var(--fog);display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;color:var(--ink);background:#fff;border:0;border-radius:8px;padding:12px 14px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.form-note{font-size:13px;color:var(--mist);margin:0}
+.form-note a{color:var(--fog)}
+.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-status{margin:0;font-size:15px;min-height:1.5em}
+.form-status.ok{color:var(--ok)}
+.form-status.err{color:#ff9c8a}
+.way li a{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
+.consent{position:fixed;left:16px;bottom:16px;z-index:50;width:min(400px,calc(100% - 32px));background:#fff;color:var(--ink);border-radius:18px;padding:20px 20px 18px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6),0 0 0 1px rgba(14,23,41,.08)}
+.consent[hidden]{display:none}
+.consent h2{font-size:19px;letter-spacing:-.02em;margin:0 0 6px;max-width:none}
+.consent p{margin:0;font-size:14.5px;line-height:1.55;color:var(--muted)}
+.consent p a{color:var(--ink)}
+.consent-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.consent-actions .btn{min-height:40px;padding:0 16px;font-size:14px}
+.consent-actions .btn-ghost{color:var(--ink)}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer}
+.linkbtn:hover{color:#fff}
+.frame{padding:0;border:0;border-radius:20px;width:min(1180px,96vw);height:min(92svh,1100px);max-width:none;max-height:none;background:#fff;color:var(--ink);overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.6)}
+.frame[open]{display:flex;flex-direction:column}
+.frame::backdrop{background:rgba(8,12,22,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.frame-head{display:flex;align-items:center;gap:16px;padding:8px 10px 8px 20px;border-bottom:1px solid var(--line);font-size:15px}
+.frame-head strong{margin-right:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frame-head a{font-size:14px;color:var(--muted);text-decoration:none;white-space:nowrap}
+.frame-head a:hover{color:var(--ink)}
+.frame-close{width:40px;height:40px;flex:none;border-radius:50%;border:0;background:var(--paper);color:var(--ink);font-size:22px;cursor:pointer}
+.frame iframe{flex:1;border:0;width:100%;background:#fff}
+@media (max-width:640px){.frame{width:100vw;height:100svh;border-radius:0}.frame-head a{display:none}}
+footer{background:var(--night);color:var(--mist);padding:30px 0 44px;font-size:14px;border-top:1px solid var(--night-3)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer nav{display:flex;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+
+@media (max-width:980px){
+  .nav-links{display:none}
+  .fam{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:10px;align-content:start;padding-top:78px}
+  .fam-left{grid-template-columns:1fr auto;gap:8px 16px;align-items:center}
+  .fam-head{grid-column:1}
+  .stations{grid-column:1/-1}
+  .fam-title{font-size:26px}
+  .dial-stage{width:92px;margin:0}
+  .seg-label{display:none}
+  .stations{height:190px}
+  .station h3{font-size:24px;margin:4px 0 6px}
+  .station p{font-size:14.5px}
+  .station .buy{margin-top:10px}
+  .devices{height:auto;min-height:0;order:-1}
+  .fam{display:flex;flex-direction:column}
+  .devices{height:36svh;width:100%}
+  .org{grid-template-columns:1fr;gap:18px;align-content:center}
+  .story-grid{grid-template-columns:1fr;padding-top:60px}
+  .portrait{display:none}
+  .cite img{display:block}
+  .team-copy{bottom:8svh}
+  .team-copy p{font-size:16px}
+  .team-shade{background:linear-gradient(0deg,rgba(14,23,41,.92) 0%,rgba(14,23,41,.6) 50%,rgba(14,23,41,.15) 100%),linear-gradient(0deg,rgba(14,23,41,var(--td,0)),rgba(14,23,41,var(--td,0)))}
+  .org .lead{display:none}
+  .org-points{display:none}
+  .ways,.prices{grid-template-columns:1fr}
+  .tier+.tier{border-left:0;border-top:1px solid var(--line)}
+  .faq-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
+  .section{padding:84px 0}
+}
+@media (max-width:820px){
+  .card{width:min(92vw,520px)}
+  .words{font-size:min(13.6vw,16svh)}
+}
+@media (max-width:560px){
+  .nav .btn{display:none}
+  .card-body{padding:14px;font-size:12.5px}
+  .hero-end .row .btn{min-height:44px;padding:0 18px;font-size:15px}
+}
+.reduced .scene{height:auto!important}
+.reduced .sticky{position:relative;height:auto;min-height:100svh;padding:90px 0 60px}
+.reduced .hint{display:none}
+@media (prefers-reduced-motion:reduce){.flow,.led,.hint i::after{animation:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/icon.webp" alt="" width="28" height="28">KI-Anonymisierer</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#family">Products</a>
+      <a href="#wege">Find your version</a>
+      <a href="#team">For organizations</a>
+      <a href="#preise">Pricing</a>
+      <a href="#kontakt">Contact</a>
+    </nav>
+    <a class="lang" href="index.html" hreflang="de" lang="de">DE</a>
+    <a class="btn btn-marker" href="#wege">Find your version</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="scene" id="hero" data-nav="dark">
+  <div class="sticky hero-stage" id="top">
+    <h1 class="sr">The biggest privacy problem sits between copy &amp; paste.</h1>
+    <p class="hero-top" aria-hidden="true">The biggest <b>privacy problem</b> sits between</p>
+    <div class="words" aria-hidden="true"><span class="word" id="wCopy">Copy</span><span class="word amp" id="wAmp">&amp;</span><span class="word" id="wPaste">Paste.</span></div>
+    <div class="card" id="card" aria-label="Example with made-up data">
+      <div class="card-head"><b><img src="img/icon.webp" alt="">Clipboard</b><span class="kbd" id="cardKeys"><kbd>Ctrl</kbd><kbd>C</kbd></span></div>
+      <div class="card-body">Dear Ms <span class="sw"><span class="o">Lena Hoffmann</span><span class="n">[Person 1]</span></span>, your application of <span class="sw"><span class="o">09/14/2026</span><span class="n">[Date 1]</span></span> (ref. <span class="sw"><span class="o">48-7732/26</span><span class="n">[ID 1]</span></span>) has been received. Questions to <span class="sw"><span class="o">l.hoffmann@example.com</span><span class="n">[Email 1]</span></span> or <span class="sw"><span class="o">+49 170 5550123</span><span class="n">[Phone 1]</span></span>.</div>
+      <div class="card-foot"><span id="cardState">Copied, still with real names</span><span class="count" id="cardCount"></span></div>
+    </div>
+    <div class="hero-end" id="heroEnd">
+      <p>KI-Anonymisierer replaces names, addresses and identifiers with placeholders before text lands in ChatGPT, Copilot and the like. On your device, in the browser or on your own server.</p>
+      <div class="row"><a class="btn btn-marker" href="#wege">Find your version</a><a class="btn btn-ghost" href="#team">For organizations</a></div>
+    </div>
+    <div class="hint" id="hint" aria-hidden="true"><i></i>Scroll</div>
+  </div>
+</section>
+
+<section class="scene" id="story" data-nav="dark">
+  <div class="sticky story-stage">
+    <div class="story-grid">
+    <figure class="portrait" id="portrait"><img src="img/robert.webp" alt="Robert Meyer giving a talk to an audience" width="820" height="1230" loading="lazy"><figcaption>Robert Meyer on stage</figcaption></figure>
+    <figure style="margin:0">
+      <blockquote class="quote" id="quote">“As an AI lecturer, I see it every day: client data drifting into AI chats almost unnoticed. Not out of malice, but in the split second <span class="mk">between copy and paste.</span> So, step by step, I built tools for exactly that moment.”</blockquote>
+      <figcaption class="cite" id="cite"><span></span><img src="img/robert-avatar.webp" alt="" width="160" height="160"><div><strong>Robert Meyer</strong><br>AI consultant, author and lecturer</div></figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="family" data-nav="dark" aria-labelledby="famTitle">
+  <div class="sticky">
+    <div class="fam">
+      <div class="fam-left">
+        <div class="fam-head">
+          <p class="fam-kicker">From the Mac to your own server</p>
+          <h2 class="fam-title" id="famTitle">One idea.<br>Five workplaces.</h2>
+        </div>
+        <div class="dial-stage" aria-hidden="true">
+          <span class="dial-marker"></span>
+          <div class="dial" id="dial">
+            <svg viewBox="-110 -110 220 220" id="dialSvg"></svg>
+          </div>
+          <div class="dial-hub"><img src="img/icon.webp" alt=""></div>
+        </div>
+        <div class="stations" id="stations">
+          <article class="station"><span class="step">Step 1 of 5 · the beginning</span><h3>Mac</h3><p>Menu bar app with a global shortcut. Anonymize text and images locally and restore the names after the AI reply.</p><div class="buy">one-time €9.99 <a href="apps/mac_eng.html" data-frame="KI-Anonymisierer for Mac">View Mac app</a></div></article>
+          <article class="station"><span class="step">Step 2 of 5 · the browser</span><h3>Chrome</h3><p>Free, right in the browser. Paste Guard checks text in supported AI chats before pasting and can use your own server.</p><div class="buy">Free <a href="apps/chrome_eng.html" data-frame="KI-Anonymisierer for Chrome">View extension</a></div></article>
+          <article class="station"><span class="step">Step 3 of 5 · on the go</span><h3>iPhone &amp; iPad</h3><p>Clean text, photos and screenshots before sharing, straight from the share sheet.</p><div class="buy">one-time €9.99 <a href="apps/ios_eng.html" data-frame="Anonymisierer for iPhone &amp; iPad">View iOS app</a></div></article>
+          <article class="station"><span class="step">Step 4 of 5 · everyday Windows</span><h3>Windows</h3><p>Tray app with Ctrl + Shift + A. Regex, built-in NER and optional local AI, also via Ollama or LM Studio. German interface.</p><div class="buy">one-time €14.99 <a href="apps/windows_eng.html" data-frame="KI-Anonymisierer for Windows">View Windows app</a></div></article>
+          <article class="station"><span class="step">Step 5 of 5 · the team</span><h3>Server &amp; Client</h3><p>Detection runs centrally in your infrastructure. The Windows client, Chrome and your own applications use it via an API.</p><div class="buy">Single seat free <a href="apps/server_eng.html" data-frame="KI-Anonymisierer Server &amp; Client">View server &amp; client</a></div></article>
+        </div>
+      </div>
+      <div class="devices" id="devices">
+        <div class="device"><div class="laptop"><div class="lid"><div class="screen"><div class="menubar"><i></i></div><img class="win" src="img/mac-text.webp" alt="KI-Anonymisierer as a Mac app: original and anonymized text" width="1173" height="885"></div></div><div class="base"></div></div></div>
+        <div class="device"><div class="monitor"><div class="mon-screen"><img src="img/chrome.webp" alt="Chrome extension next to a website" width="1600" height="798" loading="lazy"></div><div class="mon-neck"></div><div class="mon-foot"></div></div></div>
+        <div class="device"><div class="combo"><div class="ipad"><img src="img/ipad.webp" alt="iPad app with original and anonymized text" width="1400" height="1050" loading="lazy"></div><div class="iphone"><img src="img/iphone-text.webp" alt="iPhone app with detected sensitive details" width="700" height="1521" loading="lazy"></div></div></div>
+        <div class="device"><div class="laptop pc"><div class="lid"><div class="screen"><img src="img/windows.webp" alt="Windows app with original and anonymized text" width="1440" height="810" loading="lazy"></div></div><div class="base"></div></div></div>
+        <div class="device"><div class="server" role="img" aria-label="Diagram: Windows client, Chrome and your own applications send text to KI-Anonymisierer Server and receive matches back">
+          <svg viewBox="0 0 720 440" font-family="Schibsted Grotesk, sans-serif">
+            <rect x="380" y="10" width="330" height="420" rx="26" fill="rgba(255,255,255,.03)" stroke="#2c3d60" stroke-dasharray="6 8"/>
+            <text x="404" y="44" fill="#9eabc2" font-size="15">Your network</text>
+            <g>
+              <rect x="420" y="132" width="250" height="56" rx="10" fill="#1f2d4b" stroke="#35486f"/>
+              <rect x="420" y="196" width="250" height="56" rx="10" fill="#1f2d4b" stroke="#35486f"/>
+              <rect x="420" y="260" width="250" height="56" rx="10" fill="#1f2d4b" stroke="#35486f"/>
+              <circle class="led" cx="444" cy="160" r="5" fill="#3ccf8e"/>
+              <circle class="led" cx="444" cy="224" r="5" fill="#3ccf8e" style="animation-delay:.8s"/>
+              <circle class="led" cx="444" cy="288" r="5" fill="#f5d94a" style="animation-delay:1.6s"/>
+              <g stroke="#35486f" stroke-width="3"><path d="M600 150v20M612 150v20M624 150v20M636 150v20M648 150v20"/><path d="M600 214v20M612 214v20M624 214v20M636 214v20M648 214v20"/><path d="M600 278v20M612 278v20M624 278v20M636 278v20M648 278v20"/></g>
+              <text x="462" y="166" fill="#fff" font-size="16" font-weight="700">KI-Anonymisierer</text>
+              <text x="462" y="230" fill="#fff" font-size="16" font-weight="700">Server · Docker</text>
+              <text x="462" y="294" fill="#c9d2e2" font-size="14">Rules + GLiNER</text>
+              <text x="420" y="350" fill="#9eabc2" font-size="14">Custom terms, maintained centrally</text>
+            </g>
+            <g font-size="16" font-weight="600">
+              <rect x="10" y="60" width="220" height="70" rx="14" fill="#fff"/>
+              <text x="30" y="92" fill="#0e1729">Windows-Client</text><text x="30" y="114" fill="#5a6579" font-size="13" font-weight="400">asks before sending</text>
+              <rect x="10" y="185" width="220" height="70" rx="14" fill="#fff"/>
+              <text x="30" y="217" fill="#0e1729">Chrome + Paste Guard</text><text x="30" y="239" fill="#5a6579" font-size="13" font-weight="400">checks before pasting</text>
+              <rect x="10" y="310" width="220" height="70" rx="14" fill="#fff"/>
+              <text x="30" y="342" fill="#0e1729">Your own application</text><text x="30" y="364" fill="#5a6579" font-size="13" font-weight="400">via the API</text>
+            </g>
+            <g fill="none" stroke-width="2.4" stroke-linecap="round">
+              <path class="flow" d="M232 88 C 320 88 330 170 414 176" stroke="#9eabc2"/>
+              <path class="flow" d="M232 220 L 414 220" stroke="#9eabc2"/>
+              <path class="flow" d="M232 345 C 320 345 330 270 414 264" stroke="#9eabc2"/>
+              <path class="flow back" d="M414 196 C 330 196 320 108 232 106" stroke="#f5d94a"/>
+            </g>
+            <text x="262" y="132" fill="#f5d94a" font-size="13">Matches</text>
+            <text x="300" y="212" fill="#9eabc2" font-size="13">Text</text>
+          </svg>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section light" id="wege" data-nav="light">
+  <div class="wrap">
+    <p class="kicker">The key question is not the platform</p>
+    <h2>Where should detection run?</h2>
+    <div class="ways">
+      <article class="way">
+        <h3>On your device</h3>
+        <p class="sub">Single seat, no server, ready right away.</p>
+        <ul>
+          <li><a href="apps/mac_eng.html" data-frame="KI-Anonymisierer for Mac">Mac</a><b>€9.99</b></li>
+          <li><a href="apps/ios_eng.html" data-frame="Anonymisierer for iPhone &amp; iPad">iPhone &amp; iPad</a><b>€9.99</b></li>
+          <li><a href="apps/windows_eng.html" data-frame="KI-Anonymisierer for Windows">Windows</a><b>€14.99</b></li>
+        </ul>
+        <p class="note" style="color:var(--muted)">Tap an app for details, screenshots and the store link.</p>
+      </article>
+      <article class="way">
+        <h3>In the browser</h3>
+        <p class="sub">Free, right before the AI chat.</p>
+        <ul>
+          <li><a href="apps/chrome_eng.html" data-frame="KI-Anonymisierer for Chrome">Chrome extension</a><b>€0</b></li>
+          <li>Paste Guard in AI chats<b>included</b></li>
+          <li>Connection to your server<b>optional</b></li>
+        </ul>
+        <a class="btn btn-ink" href="https://chromewebstore.google.com/detail/jaoallgfipnfnibbnjeflecgfmbhefoa" target="_blank" rel="noopener noreferrer" data-rybbit-event="chrome_store_click">Install for free</a>
+      </article>
+      <article class="way dark">
+        <h3>In your infrastructure</h3>
+        <p class="sub">Many workstations, one central detection service.</p>
+        <ul>
+          <li><a href="apps/server_eng.html" data-frame="KI-Anonymisierer Server &amp; Client">KI-Anonymisierer Server</a><b>Docker</b></li>
+          <li><a href="apps/server_eng.html" data-frame="KI-Anonymisierer Server &amp; Client">Windows client</a><b>coming soon</b></li>
+          <li>Chrome and your own apps<b>via the API</b></li>
+        </ul>
+        <p class="note">Text is sent to your own server for analysis.</p>
+        <a class="btn btn-marker" href="#team">For organizations</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="team" data-nav="dark" aria-labelledby="teamTitle">
+  <div class="sticky">
+    <img class="team-img" src="img/organisation.webp" alt="Open-plan public administration office with several workstations and a server cabinet in the background" width="1672" height="941" loading="lazy">
+    <div class="team-shade"></div>
+    <div class="team-copy" id="teamCopy">
+      <p class="kicker">For teams, SMEs and public authorities</p>
+      <h2 id="teamTitle">When everyone copies, you need a shared standard.</h2>
+      <p>In public administration, law firms and mid-sized companies, many people work with the same sensitive data every day. KI-Anonymisierer brings the check to every workstation, centrally managed if you like.</p>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="org" data-nav="dark" aria-labelledby="orgTitle">
+  <div class="sticky">
+    <div class="org">
+      <div>
+        <p class="kicker" style="color:var(--mist)">The solution behind it</p>
+        <div class="org-counter" id="orgCount" aria-hidden="true">0<small>workstations, one central detection service</small></div>
+        <h2 id="orgTitle" class="sr">200 workstations do not need 200 AI installations.</h2>
+        <p class="lead">200 workstations do not need 200 AI installations. KI-Anonymisierer Server bundles detection in a self-hosted Docker service.</p>
+        <ul class="org-points" id="orgPoints">
+          <li><span><b>Self-hosted.</b> The server runs in your network, not in someone else’s cloud.</span></li>
+          <li><span><b>Consent at the workstation.</b> The Windows client asks before sending and before replacing.</span></li>
+          <li><span><b>Maintained centrally.</b> Rules, GLiNER model and custom terms in one place.</span></li>
+          <li><span><b>Open interface.</b> The Windows client, Chrome and your own applications share the same API.</span></li>
+        </ul>
+        <p class="honest">In server mode, text is sent to your server for analysis. According to the documentation, the server stores no plain text.</p>
+        <div class="org-cta"><a class="btn btn-marker" href="#kontakt" data-topic="Pilot for our organization" data-rybbit-event="pilot_click">Request a pilot</a><a class="btn btn-ghost" data-rybbit-event="github_click" href="https://github.com/rmdroid/anonymisierer-server" target="_blank" rel="noopener noreferrer">Server on GitHub</a></div>
+      </div>
+      <div class="org-viz"><img src="img/datenfluss.webp" alt="Diagram: 200 workstations whose connections converge in one central detection service" width="1672" height="941" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section light" id="preise" data-nav="light">
+  <div class="wrap">
+    <p class="kicker">Start small, grow when you need to</p>
+    <h2>From a free start to your whole organization.</h2>
+    <div class="prices">
+      <div class="tier"><h3>Free</h3><p class="for">To try out and for the browser</p><ul><li>Chrome with Paste Guard <b>€0</b></li><li>Server as local single seat <b>€0</b></li></ul><a class="btn btn-ghost" href="https://chromewebstore.google.com/detail/jaoallgfipnfnibbnjeflecgfmbhefoa" target="_blank" rel="noopener noreferrer" data-rybbit-event="chrome_store_click">Get the Chrome extension</a></div>
+      <div class="tier"><h3>Single seat</h3><p class="for">Native apps, buy once, no subscription</p><ul><li>Mac <b>€9.99</b></li><li>iPhone &amp; iPad <b>€9.99</b></li><li>Windows <b>€14.99</b></li></ul><a class="btn btn-ink" href="#wege">Compare apps</a></div>
+      <div class="tier dark"><h3>Organization</h3><p class="for">Central detection for many workstations</p><ul><li>Server license, 25 users <b>€990 / year</b></li><li>Windows client <b>coming soon</b></li><li>Other tiers, pilot and setup <b>on request</b></li></ul><p class="for" style="margin:-12px 0 22px;font-size:13px">Prices plus VAT. The <a href="eula-server_eng.html" data-frame="Server license terms" style="color:inherit">server EULA</a> applies.</p><a class="btn btn-marker" href="#kontakt" data-topic="Quote for our organization" data-rybbit-event="quote_click">Request a quote</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section light" id="fragen" data-nav="light" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div><p class="kicker">Good to know</p><h2>Honest answers.</h2></div>
+    <div>
+      <details><summary>Does my text leave my computer?</summary><p>Not with the apps for Mac, iPhone, iPad and Windows, or the Chrome extension without a server connection: detection runs on your device. In server mode, text is sent to your self-hosted server for analysis.</p></details>
+      <details><summary>Does the software detect every sensitive detail?</summary><p>No automatic detection is complete. KI-Anonymisierer supports the review; checking before you share remains essential.</p></details>
+      <details><summary>Does this make my use automatically GDPR-compliant?</summary><p>No software can promise that across the board. KI-Anonymisierer reduces personal data before text is shared. The legal assessment of your use stays with you and your data protection advisor.</p></details>
+      <details><summary>Do we need a server for several workstations?</summary><p>Not necessarily. Each workstation can use its own app. The server pays off when you want to maintain detection and custom terms centrally.</p></details>
+      <details><summary>How large does the server need to be?</summary><p>That depends on text volume, response times and concurrent requests. In the pilot, we work out together what your setup needs.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="kontakt" data-nav="dark">
+  <div class="wrap contact-grid">
+    <div><h2>Let’s talk about your setup.</h2><p class="lead">Law firm, practice, public administration or mid-sized company: briefly describe your situation. You will get a personal reply from Robert Meyer.</p></div>
+    <form id="contactForm">
+      <label>Name<input name="name" autocomplete="name"></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>Topic<select name="topic" id="topic"><option>General question</option><option>Pilot for our organization</option><option>Quote for our organization</option><option>Licenses for several single seats</option></select></label>
+      <label>Message<textarea name="message" placeholder="For example: 40 workstations, Windows and Chrome, own server available"></textarea></label>
+      <div class="trap" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <p class="form-note">Your details are sent to Robert Meyer to handle your request. <a href="datenschutz_eng.html" data-frame="Privacy">Privacy</a></p>
+      <button class="btn btn-marker" type="submit" id="sendBtn">Send request</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Robert Meyer · KI-Anonymisierer</span>
+    <nav aria-label="Legal"><a href="impressum_eng.html" data-frame="Legal notice">Legal notice</a><a href="datenschutz_eng.html" data-frame="Privacy">Privacy</a><a href="eula-server_eng.html" data-frame="Server license terms">Server EULA</a><a href="eula-mac_eng.html" data-frame="Mac license terms">Mac EULA</a><button class="linkbtn" type="button" id="consentOpen">Statistics settings</button><a href="index.html" hreflang="de" lang="de">Deutsch</a><a href="https://ki-anonymisierer.de/index_eng.html">ki-anonymisierer.de</a><a href="https://youtube.com/@rmkipraxis" target="_blank" rel="noopener noreferrer">YouTube</a></nav>
+  </div>
+</footer>
+
+<aside class="consent" id="consent" aria-labelledby="consentTitle" hidden>
+  <h2 id="consentTitle">Your privacy</h2>
+  <p>This website sets no cookies. Without your consent, we collect no usage data. If you agree, we use Rybbit to measure anonymously which pages are visited, without cookies and without profiles. <a href="datenschutz_eng.html" data-frame="Privacy">Privacy</a></p>
+  <div class="consent-actions"><button class="btn btn-ink" type="button" data-consent="granted">Allow statistics</button><button class="btn btn-ghost" type="button" data-consent="denied">Necessary only</button></div>
+</aside>
+
+<dialog class="frame" id="frame" aria-labelledby="frameTitle">
+  <div class="frame-head"><strong id="frameTitle"></strong><a id="frameOpen" href="#" target="_blank" rel="noopener">Open in new tab ↗</a><button class="frame-close" type="button" id="frameClose" autofocus aria-label="Close">×</button></div>
+  <iframe id="frameView" title="Detail view" src="about:blank"></iframe>
+</dialog>
+
+<script>
+(() => {
+  const L = document.documentElement.lang === 'en' ? {
+    en: true, interest: 'KI-Anonymisierer request', topicLabel: 'Topic', msgLabel: 'Message',
+    sending: 'Sending …', sent: 'Thank you. Your request has been sent.', failed: 'We did not receive a confirmation. Your entries have been kept. Please try again later or email rm@kostenmanager.net.',
+    st: ['Copied, still with real names', 'Detecting sensitive details', 'Replaced with placeholders', 'Ready to paste'], found: ' found', one: ' detail replaced', many: ' details replaced',
+    k: ['Ctrl C', 'Ctrl ⇧ A', 'Ctrl V']
+  } : {
+    en: false, interest: 'Anfrage KI-Anonymisierer', topicLabel: 'Anliegen', msgLabel: 'Nachricht',
+    sending: 'Wird übermittelt …', sent: 'Vielen Dank. Ihre Anfrage wurde übermittelt.', failed: 'Wir haben keine Versandbestätigung erhalten. Ihre Eingaben bleiben erhalten. Bitte versuchen Sie es später erneut oder schreiben Sie an rm@kostenmanager.net.',
+    st: ['Copied, still with real names', 'Erkennt sensible Angaben', 'Ersetzt durch Platzhalter', 'Bereit zum Einfügen'], found: ' gefunden', one: ' Angabe ersetzt', many: ' Angaben ersetzt',
+    k: ['Strg C', 'Strg ⇧ A', 'Strg V']
+  };
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) document.documentElement.classList.add('reduced');
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  const $ = id => document.getElementById(id);
+  const progress = el => {
+    const r = el.getBoundingClientRect();
+    const span = r.height - innerHeight;
+    return span > 0 ? clamp(-r.top / span) : 1;
+  };
+
+  const nav = $('nav');
+  const navSections = [...document.querySelectorAll('[data-nav]')];
+  const updateNav = () => {
+    nav.classList.toggle('scrolled', scrollY > 10);
+    const probe = 33;
+    const cur = navSections.find(s => { const r = s.getBoundingClientRect(); return r.top <= probe && r.bottom > probe; });
+    nav.classList.toggle('light', !!cur && cur.dataset.nav === 'light');
+  };
+
+  const hero = $('hero'), wCopy = $('wCopy'), wAmp = $('wAmp'), wPaste = $('wPaste'), card = $('card');
+  const sws = [...card.querySelectorAll('.sw')];
+  const cardState = $('cardState'), cardCount = $('cardCount'), cardKeys = $('cardKeys'), heroEnd = $('heroEnd'), hint = $('hint');
+  let keyState = '';
+  const setKeys = k => { if (k === keyState) return; keyState = k; cardKeys.innerHTML = k.split(' ').map(x => '<kbd>' + x + '</kbd>').join(''); };
+  const renderHero = p => {
+    const a = ease(clamp(p / .26));
+    const vertical = innerWidth < 820;
+    const s = 1 - a * (vertical ? .52 : .5);
+    const cw = card.offsetWidth, ch = card.offsetHeight;
+    const copyW = wCopy.offsetWidth, pasteW = wPaste.offsetWidth, ampW = wAmp.offsetWidth, wordH = wCopy.offsetHeight;
+    const gap = parseFloat(getComputedStyle(wAmp.parentNode).columnGap) || 0;
+    const total = copyW + ampW + pasteW + gap * 2;
+    const c0 = copyW / 2 - total / 2, p0 = total / 2 - pasteW / 2;
+    let cx, cy = 0, px, py = 0;
+    if (vertical) {
+      cx = -c0 * a; px = -p0 * a;
+      cy = -(ch / 2 + 16 + wordH * s / 2) * a; py = (ch / 2 + 16 + wordH * s / 2) * a;
+    } else {
+      cx = (-(cw / 2 + 30 + copyW * s / 2) - c0) * a;
+      px = ((cw / 2 + 30 + pasteW * s / 2) - p0) * a;
+    }
+    const fade = 1 - clamp((p - .84) / .1) * (vertical ? 1 : .75);
+    wCopy.style.transform = `translate(${cx}px,${cy}px) scale(${s})`;
+    wPaste.style.transform = `translate(${px}px,${py}px) scale(${s})`;
+    wCopy.style.opacity = wPaste.style.opacity = fade;
+    wAmp.style.opacity = 1 - clamp(a * 2.2);
+    wAmp.style.transform = `scale(${1 - a * .6})`;
+    const cardLift = clamp((p - .84) / .1) * (vertical ? 60 : 70);
+    card.style.opacity = clamp((p - .06) / .16);
+    card.style.transform = `translate(-50%,calc(-50% - ${cardLift}px)) scale(${.72 + a * .28})`;
+    const hits = Math.floor(clamp((p - .3) / .22) * 5.99);
+    const dones = Math.floor(clamp((p - .55) / .24) * 5.99);
+    sws.forEach((el, i) => { el.classList.toggle('hit', i < hits && i >= dones); el.classList.toggle('done', i < dones); });
+    if (dones >= 5) { cardState.textContent = L.st[3]; setKeys(L.k[2]); }
+    else if (dones > 0) { cardState.textContent = L.st[2]; setKeys(L.k[1]); }
+    else if (hits > 0) { cardState.textContent = L.st[1]; setKeys(L.k[1]); }
+    else { cardState.textContent = L.st[0]; setKeys(L.k[0]); }
+    cardCount.textContent = dones ? dones + (dones === 1 ? L.one : L.many) : (hits ? hits + L.found : '');
+    const e = clamp((p - .86) / .1);
+    heroEnd.style.opacity = e;
+    heroEnd.style.transform = `translateY(${(1 - e) * 20}px)`;
+    heroEnd.style.pointerEvents = e > .5 ? 'auto' : 'none';
+    hint.style.opacity = 1 - clamp(p / .05);
+  };
+
+  const quote = $('quote'), cite = $('cite');
+  const wrapWords = node => {
+    [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(t => {
+          if (!t) return;
+          if (/^\s+$/.test(t)) frag.appendChild(document.createTextNode(t));
+          else { const s = document.createElement('span'); s.className = 'w'; s.textContent = t; frag.appendChild(s); }
+        });
+        n.replaceWith(frag);
+      } else wrapWords(n);
+    });
+  };
+  wrapWords(quote);
+  const qWords = [...quote.querySelectorAll('.w')];
+  const mk = quote.querySelector('.mk');
+  const mkFirst = qWords.indexOf(mk.querySelector('.w'));
+  const renderStory = p => {
+    const n = Math.round(clamp((p - .05) / .75) * qWords.length);
+    qWords.forEach((w, i) => w.classList.toggle('on', i < n));
+    mk.classList.toggle('on', n > mkFirst + 3);
+    cite.classList.toggle('on', p > .82);
+  };
+
+  const names = ['Mac', 'Chrome', 'iPhone & iPad', 'Windows', 'Server'];
+  const dialSvg = $('dialSvg');
+  const R = 104, r0 = 38, seg = 360 / 5;
+  const pt = (ang, rad) => [Math.sin(ang * Math.PI / 180) * rad, -Math.cos(ang * Math.PI / 180) * rad];
+  let svg = '<circle r="108" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.1)"/>';
+  names.forEach((nm, i) => {
+    const a0 = i * seg - seg / 2 + 1.5, a1 = i * seg + seg / 2 - 1.5;
+    const [x0, y0] = pt(a0, R), [x1, y1] = pt(a1, R), [x2, y2] = pt(a1, r0), [x3, y3] = pt(a0, r0);
+    svg += `<path class="seg" data-i="${i}" d="M${x0} ${y0} A${R} ${R} 0 0 1 ${x1} ${y1} L${x2} ${y2} A${r0} ${r0} 0 0 0 ${x3} ${y3}Z"/>`;
+    const [lx, ly] = pt(i * seg, (R + r0) / 2);
+    svg += `<text class="seg-label" data-i="${i}" x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" transform="rotate(${i * seg} ${lx} ${ly})">${nm.replace('&', '&amp;')}</text>`;
+  });
+  dialSvg.innerHTML = svg;
+  const segs = [...dialSvg.querySelectorAll('.seg')], labels = [...dialSvg.querySelectorAll('.seg-label')];
+  const dial = $('dial'), family = $('family');
+  const stations = [...document.querySelectorAll('.station')];
+  const devices = [...document.querySelectorAll('.device')];
+  let active = -1;
+  const setActive = i => {
+    if (i === active) return;
+    active = i;
+    stations.forEach((s, n) => { s.classList.toggle('on', n === i); s.setAttribute('aria-hidden', String(n !== i)); });
+    segs.forEach((s, n) => s.classList.toggle('on', n === i));
+    labels.forEach((s, n) => s.classList.toggle('on', n === i));
+  };
+  const renderFamily = t => {
+    dial.style.setProperty('--rot', (-t * seg) + 'deg');
+    devices.forEach((d, i) => {
+      const k = i - t, ak = Math.abs(k);
+      d.style.opacity = clamp(1 - ak * 1.6);
+      d.style.transform = `translateX(${k * 38}%) rotateY(${k * -32}deg) translateZ(${-ak * 260}px)`;
+      d.style.visibility = ak > .9 ? 'hidden' : 'visible';
+      d.style.zIndex = 10 - Math.round(ak * 5);
+    });
+    setActive(Math.round(t));
+  };
+  const familyT = p => {
+    const raw = clamp((p - .04) / .92) * 4;
+    const i = Math.floor(raw), f = raw - i;
+    return Math.min(4, i + ease(clamp((f - .3) / .4)));
+  };
+  const jumpTo = i => {
+    if (reduced) { renderFamily(i); return; }
+    const top = family.offsetTop + (family.offsetHeight - innerHeight) * (.04 + (i + .5) / 4 * .92 - .5 / 4 * .92);
+    scrollTo({ top: Math.max(family.offsetTop, top), behavior: 'smooth' });
+  };
+  dialSvg.addEventListener('click', e => { const i = e.target.dataset && e.target.dataset.i; if (i !== undefined) jumpTo(+i); });
+
+  const org = $('org'), orgCount = $('orgCount'), orgPoints = [...document.querySelectorAll('#orgPoints li')], orgViz = document.querySelector('.org-viz');
+  const renderOrg = p => {
+    orgCount.firstChild.nodeValue = Math.round(clamp((p - .05) / .45) * 200);
+    orgViz.style.setProperty('--clip', ((1 - ease(clamp((p - .02) / .62))) * 100) + '%');
+    orgPoints.forEach((li, i) => li.classList.toggle('on', p > .5 + i * .08));
+  };
+  const team = $('team'), teamCopy = $('teamCopy'), teamStage = team.querySelector('.sticky');
+  const renderTeam = p => {
+    teamStage.style.setProperty('--tz', 1.25 - ease(clamp(p / .7)) * .25);
+    teamStage.style.setProperty('--td', clamp((p - .78) / .22).toFixed(3));
+    const c = clamp((p - .18) / .3);
+    teamCopy.style.opacity = c * (1 - clamp((p - .85) / .15));
+    teamCopy.style.transform = `translateY(${(1 - c) * 30}px)`;
+  };
+  const portrait = $('portrait');
+  const renderPortrait = p => {
+    const v = ease(clamp(p / .35));
+    portrait.style.opacity = v;
+    portrait.style.transform = `translateY(${(1 - v) * 40}px)`;
+    portrait.style.setProperty('--pz', 1.15 - clamp(p) * .15);
+  };
+
+  let ticking = false;
+  const frame = () => {
+    ticking = false;
+    updateNav();
+    if (reduced) return;
+    renderHero(progress(hero));
+    const sp = progress($('story'));
+    renderStory(sp);
+    renderPortrait(sp);
+    renderTeam(progress(team));
+    renderFamily(familyT(progress(family)));
+    renderOrg(progress(org));
+  };
+  const request = () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } };
+  addEventListener('scroll', request, { passive: true });
+  addEventListener('resize', request);
+  document.fonts && document.fonts.ready.then(request);
+
+  if (reduced) {
+    renderHero(1); renderStory(1); renderPortrait(1); renderTeam(.5); renderFamily(0); renderOrg(1);
+    heroEnd.style.position = 'relative';
+  }
+  frame();
+
+  const topic = $('topic');
+  document.querySelectorAll('[data-topic]').forEach(a => a.addEventListener('click', () => { topic.value = a.dataset.topic; }));
+  const endpoint = 'https://n8n.top-beraternetzwerk.de/webhook/termine';
+  const form = $('contactForm'), sendBtn = $('sendBtn'), formStatus = $('formStatus');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (sendBtn.disabled || !form.reportValidity()) return;
+    const el = form.elements;
+    if (el.website.value) return;
+    const email = el.email.value.trim(), name = el.name.value.trim() || email, msg = el.message.value.trim(), subject = topic.value;
+    const page = /^https?:$/.test(location.protocol) ? location.origin + location.pathname : 'https://anonymisierer-tools.de/' + (L.en ? 'index_eng.html' : '');
+    const payload = {
+      name, email,
+      message: L.interest + '\nName: ' + name + '\nE-Mail: ' + email + '\n' + L.topicLabel + ': ' + subject + '\n' + L.msgLabel + ': ' + (msg || '-') + '\nQuelle: KI-Anonymisierer Produktfamilie\nSeite: ' + page,
+      source: 'ki-anonymisierer-landingpage-request',
+      page, interest: L.interest,
+      platform: subject + (msg ? ' - ' + msg : '')
+    };
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 15000);
+    sendBtn.disabled = true;
+    formStatus.className = 'form-status';
+    formStatus.textContent = L.sending;
+    try {
+      const res = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload), signal: ctrl.signal });
+      if (!res.ok) throw new Error('request_failed');
+      form.reset();
+      formStatus.className = 'form-status ok';
+      formStatus.textContent = L.sent;
+    } catch (err) {
+      formStatus.className = 'form-status err';
+      formStatus.textContent = L.failed;
+    } finally {
+      clearTimeout(timer);
+      sendBtn.disabled = false;
+    }
+  });
+
+  const consentKey = 'kia-consent';
+  const consentBox = $('consent');
+  let memConsent = null;
+  const readConsent = () => {
+    try { const v = localStorage.getItem(consentKey); if (v) return v; } catch (err) {}
+    try { const v = sessionStorage.getItem(consentKey); if (v) return v; } catch (err) {}
+    return memConsent;
+  };
+  const loadStats = () => {
+    if (document.getElementById('rybbit')) return;
+    const sc = document.createElement('script');
+    sc.id = 'rybbit';
+    sc.src = 'https://analyse.ki-notch.de/api/script.js';
+    sc.defer = true;
+    sc.dataset.siteId = '185d74b5a93e';
+    document.head.appendChild(sc);
+  };
+  const setConsent = v => {
+    memConsent = v;
+    try { localStorage.setItem(consentKey, v); } catch (err) {}
+    try { sessionStorage.setItem(consentKey, v); } catch (err) {}
+    consentBox.hidden = true;
+    if (v === 'granted') loadStats();
+    else if (document.getElementById('rybbit')) location.reload();
+  };
+  consentBox.querySelectorAll('[data-consent]').forEach(btn => btn.addEventListener('click', () => setConsent(btn.dataset.consent)));
+  $('consentOpen').addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation(); consentBox.hidden = false; consentBox.querySelector('[data-consent]').focus(); });
+  const stored = readConsent();
+  if (stored === 'granted') loadStats();
+  else if (stored !== 'denied') consentBox.hidden = false;
+  form.addEventListener('submit', () => { if (window.rybbit && window.rybbit.event) window.rybbit.event('contact_submit', { topic: topic.value }); });
+
+  const frameDlg = $('frame'), frameView = $('frameView'), frameTitle = $('frameTitle'), frameOpen = $('frameOpen');
+  const openFrame = (url, title) => {
+    frameView.src = url;
+    frameTitle.textContent = title;
+    frameOpen.href = url;
+    consentBox.dataset.wasOpen = consentBox.hidden ? '' : '1';
+    consentBox.hidden = true;
+    frameDlg.showModal();
+    document.documentElement.style.overflow = 'hidden';
+  };
+  const closeFrame = () => { if (frameDlg.open) frameDlg.close(); };
+  frameDlg.addEventListener('close', () => {
+    document.documentElement.style.overflow = '';
+    frameView.src = 'about:blank';
+    if (consentBox.dataset.wasOpen === '1' && !readConsent()) consentBox.hidden = false;
+    consentBox.dataset.wasOpen = '';
+  });
+  frameDlg.addEventListener('click', e => { if (e.target === frameDlg) closeFrame(); });
+  $('frameClose').addEventListener('click', closeFrame);
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[data-frame]');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+    e.preventDefault();
+    openFrame(a.getAttribute('href'), a.dataset.frame);
+  });
+  addEventListener('message', e => {
+    if (e.origin !== location.origin && location.protocol !== 'file:') return;
+    const d = e.data || {};
+    if (d.type === 'anonymisierer-close-frame') closeFrame();
+    if (d.type === 'anonymisierer-goto') {
+      closeFrame();
+      if (d.hash) { const t = document.getElementById(d.hash); if (t) t.scrollIntoView(); }
+    }
+  });
+})();
 </script>
-<aside class="privacy-notice" id="privacy-notice" aria-labelledby="privacy-title" hidden><h2 id="privacy-title">Your privacy.</h2><p>With your consent, we use Umami and Rybbit to measure website usage. Without consent, analytics stay off. You can change your choice at any time. <a data-legal="datenschutz" href="datenschutz_eng.html">Privacy</a></p><div class="privacy-actions"><button type="button" data-consent="necessary">Necessary only</button><button type="button" data-consent="analytics">Allow analytics</button></div></aside>
-<script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
-<script src="site.js" defer></script>
-<script src="privacy.js" defer></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Anonymize text & images on Mac | KI-Anonymisierer", "url": "https://anonymisierer-tools.de/index_eng.html", "description": "Anonymize text and images locally on Mac. Global shortcut, editor and optional restoration. One-time purchase from €9.99, with team licenses available.", "inLanguage": "en", "operatingSystem": "macOS 14 or later", "applicationCategory": "UtilitiesApplication", "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "EUR"}}</script>
 </body>
 </html>

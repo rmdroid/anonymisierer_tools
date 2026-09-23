@@ -1,36 +1,32 @@
-# Anonymisierer-Tools
+# KI-Anonymisierer
 
-> Local tools by Robert Meyer for preparing sensitive content before sharing. The Mac app, iPhone/iPad app, and Chrome extension are separate products. The Windows app is a separate product on the Microsoft Store.
+> Product family by Robert Meyer (AI consultant, author and lecturer, Germany) that replaces sensitive details such as names, addresses, contact details and identifiers with placeholders before text is pasted into AI tools like ChatGPT, Claude, Gemini or Copilot. Core idea: the biggest privacy problem sits between copy and paste. Detection runs on the user's device, in the browser, or centrally on a self-hosted server.
 
-## Products — Deutsch / English
+This site (anonymisierer-tools.de) is the overview of the whole product family, including the team and organization offering. Detailed single-product pages also live on https://ki-anonymisierer.de/.
 
-- [Mac DE](https://anonymisierer-tools.de/)
-- [Mac EN](https://anonymisierer-tools.de/index_eng.html)
-- [iPhone & iPad DE](https://anonymisierer-tools.de/ios/)
-- [iPhone & iPad EN](https://anonymisierer-tools.de/ios/index_eng.html)
-- [Chrome DE](https://anonymisierer-tools.de/chrome/)
-- [Chrome EN](https://anonymisierer-tools.de/chrome/index_eng.html)
-- [Windows DE](https://anonymisierer-tools.de/windows/)
-- [Windows EN](https://anonymisierer-tools.de/windows/index_eng.html)
+## Overview pages
 
-Mac: local text and image editing, global shortcuts, optional restoration using a mapping kept in RAM for no more than five minutes. macOS 14 or later. Individual license EUR 9.99; ten licenses EUR 79.90; 25+ on request. Provider checkout prices apply.
+- [Home, German](https://anonymisierer-tools.de/): product family, story, where detection runs, organizations, pricing, FAQ, contact
+- [Home, English](https://anonymisierer-tools.de/index_eng.html)
+- [Server & Windows client, German](https://anonymisierer-tools.de/apps/server.html)
+- [Server & Windows client, English](https://anonymisierer-tools.de/apps/server_eng.html)
 
-iPhone/iPad: native mobile app, separate EUR 9.99 purchase. Text, screenshots, photos, share sheet. PDF content is processed as plain text without retaining PDF layout. Do not assume Mac restoration features are included.
+## Products
 
-Chrome: free text-focused extension. Optional local Gemini Nano detection when supported. Not equivalent to the Mac app.
+- KI-Anonymisierer for Mac: native menu bar app for macOS 14+. Global shortcut (Cmd+Shift+A) anonymizes clipboard text locally, Cmd+Shift+D restores real names after the AI reply (mapping kept in RAM only, deleted after at most five minutes). Also images and screenshots (OCR text, faces, barcodes, manual retouching). Regex, Apple NaturalLanguage, optional Apple Intelligence. One-time purchase EUR 9.99. https://apps.apple.com/de/app/ki-anonymisierer/id6760411603?mt=12 · details: https://ki-anonymisierer.de/
+- Anonymisierer for iPhone & iPad: text, screenshots, photos and PDF content (as plain text) anonymized locally, including via the iOS share sheet. One-time purchase EUR 9.99 for iPhone and iPad. https://apps.apple.com/de/app/anonymisierer/id6769850811 · details: https://ki-anonymisierer.de/ios/
+- KI-Anonymisierer for Windows: native tray app, Ctrl+Shift+A, regex, built-in NER, optional local AI (small in-app model, Ollama or LM Studio), clipboard Safeguard, optional restoration (RAM only, max five minutes). Text only. x64 and ARM64. German interface. One-time purchase EUR 14.99. https://apps.microsoft.com/detail/9N229VW00Z01 · details: https://ki-anonymisierer.de/windows/
+- KI-Anonymisierer for Chrome: free browser extension. Rule-based detection, optional Gemini Nano, Paste Guard checks text in supported AI chats before pasting, optional connection to KI-Anonymisierer Server. https://chromewebstore.google.com/detail/jaoallgfipnfnibbnjeflecgfmbhefoa · details: https://ki-anonymisierer.de/chrome/
+- KI-Anonymisierer Server: self-hosted Docker service with rules and optional GLiNER model, browser admin interface, HTTP API that returns matches with category and position (the client creates the placeholders). Local single-seat use free; network and multi-user operation require a license, e.g. EUR 990 per year for 25 users (plus VAT), other tiers and perpetual licenses on request. License terms: https://anonymisierer-tools.de/eula-server_eng.html · https://github.com/rmdroid/anonymisierer-server
+- KI-Anonymisierer Windows Client: tray app without its own AI models that sends copied text to the configured server only after consent (optional Safeguard mode), shows matches and replaces them after confirmation. API key stored with Windows DPAPI. Coming soon to the Microsoft Store.
 
-Windows: native text app on the Microsoft Store (one-time purchase €14.99, x64 and ARM64, German-only interface): https://apps.microsoft.com/detail/9N229VW00Z01. Local regex, built-in NER, optional local AI (small in-app model or Ollama/LM Studio). Tray icon, editor, Ctrl+Shift+A shortcut, local clipboard Safeguard, optional restoration of the last session held in RAM for at most five minutes. No image or screenshot processing.
+## Important facts and limits
 
-Automatic detection may miss information. Review results before sharing. Reversible placeholder mapping is pseudonymization, not irreversible anonymization. The Mac website demo uses fixed fictional data, no real AI service or app detection engine.
+- In the device apps and the Chrome extension without server connection, detection runs locally. In server mode, text is sent to the user's own server for analysis.
+- No automatic detection is complete; users must review results before sharing. The products do not guarantee GDPR compliance.
+- Target groups: individuals, teams, law firms, medical practices, tax advisors, HR, SMEs and public administration.
 
-## Legal and contact
+## Contact
 
-- [Impressum](https://anonymisierer-tools.de/impressum.html)
-- [Legal notice](https://anonymisierer-tools.de/impressum_eng.html)
-- [Datenschutz](https://anonymisierer-tools.de/datenschutz.html)
-- [Privacy policy](https://anonymisierer-tools.de/datenschutz_eng.html)
-- [Mac EULA DE](https://anonymisierer-tools.de/eula.html)
-- [Mac EULA EN](https://anonymisierer-tools.de/eula_eng.html)
-- Contact: rm@kostenmanager.net
-
-The existing separate web demo remains at https://ki-anonymisierer.de/webdemo/. It is not included in the Mac license.
+- Robert Meyer, rm@kostenmanager.net
+- Contact form: https://anonymisierer-tools.de/#kontakt

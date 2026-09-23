@@ -1,16 +1,7 @@
-# Anonymisierer-Tools: vollständige Produktfamilie DE/EN
+# anonymisierer-tools.de
 
-Ziel: https://anonymisierer-tools.de/ 
+Website der KI-Anonymisierer-Produktfamilie (Mac, iPhone/iPad, Windows, Chrome, Server & Windows-Client).
 
-
-## Seiten
-
-| Produkt | Deutsch | Englisch |
-| --- | --- | --- |
-| Mac | index.html | index_eng.html |
-| iPhone/iPad | ios/index.html | ios/index_eng.html |
-| Chrome | chrome/index.html | chrome/index_eng.html |
-| Windows-Vormerkung | windows/index.html | windows/index_eng.html |
-
-
-
+- Veröffentlicht über GitHub Pages unter https://anonymisierer-tools.de
+- Die alte Seite liegt im Branch `archiv-alte-seite`
+- Alte Unterseiten (`/ios/`, `/chrome/`, `/windows/`, `/eula.html`) leiten auf die neuen Seiten weiter
