@@ -313,6 +313,28 @@ textarea{min-height:120px;resize:vertical}
 .tz-done .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
 .tz-done .btn-ghost{color:var(--ink)}
 @media (max-width:600px){.tz-grid{grid-template-columns:1fr}.tz form,.tz-done{padding:10px 18px 22px}}
+.dock{display:none}
+.sheet{padding:0;border:0;margin:auto auto 0;width:100%;max-width:560px;border-radius:22px 22px 0 0;background:#fff;color:var(--ink);box-shadow:0 -20px 60px rgba(0,0,0,.4)}
+.sheet::backdrop{background:rgba(8,12,22,.6)}
+.sheet-head{display:flex;justify-content:space-between;align-items:center;padding:16px 16px 6px 22px}
+.sheet-head h2{font-size:21px;letter-spacing:-.02em;margin:0;max-width:none}
+.sheet ul{list-style:none;margin:0;padding:6px 14px calc(18px + env(safe-area-inset-bottom))}
+.sheet li a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 10px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600;font-size:16.5px}
+.sheet li:last-child a{border-bottom:0}
+.sheet li a span{font-weight:500;font-size:14px;color:var(--muted);white-space:nowrap}
+@media (max-width:980px){
+  .dock{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:45;padding:6px;border-radius:20px;background:rgba(14,23,41,.86);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 18px 40px -10px rgba(0,0,0,.6),inset 0 0 0 1px rgba(255,255,255,.1);transition:transform .3s var(--ease),opacity .3s}
+  .dock a,.dock button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:54px;border:0;border-radius:14px;background:transparent;color:#fff;font:600 12.5px/1.1 var(--sans);text-decoration:none;cursor:pointer}
+  .dock svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .dock .main{background:var(--marker);color:var(--ink)}
+  .nav.menu-open~main .dock,.dock.hide{transform:translateY(140%);opacity:0;pointer-events:none}
+  footer{padding-bottom:110px}
+  .hero-end{bottom:calc(6svh + 74px + env(safe-area-inset-bottom))}
+}
+@media (max-width:980px) and (max-height:800px){
+  .hero-end p{display:none}
+  .consent{bottom:calc(88px + env(safe-area-inset-bottom))}
+}
 .frame{padding:0;border:0;border-radius:20px;width:min(1180px,96vw);height:min(92svh,1100px);max-width:none;max-height:none;background:#fff;color:var(--ink);overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.6)}
 .frame[open]{display:flex;flex-direction:column}
 .frame::backdrop{background:rgba(8,12,22,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
@@ -368,8 +390,8 @@ footer a:hover{color:#fff}
   .team-copy{bottom:8svh}
   .team-copy p{font-size:16px}
   .team-shade{background:linear-gradient(0deg,rgba(14,23,41,.92) 0%,rgba(14,23,41,.6) 50%,rgba(14,23,41,.15) 100%),linear-gradient(0deg,rgba(14,23,41,var(--td,0)),rgba(14,23,41,var(--td,0)))}
-  .org .lead{display:none}
-  .org-points{display:none}
+  .org .lead{font-size:16px}
+  .org-points li{font-size:15px}
   .ways,.prices{grid-template-columns:1fr}
   .tier+.tier{border-left:0;border-top:1px solid var(--line)}
   .faq-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
@@ -890,6 +912,25 @@ html.hc .team-shade{background:rgba(14,23,41,.88)}
   <div class="consent-actions"><button class="btn btn-ink" type="button" data-consent="granted">Statistik erlauben</button><button class="btn btn-ghost" type="button" data-consent="denied">Nur notwendig</button></div>
 </aside>
 
+<nav class="dock" id="dock" aria-label="Schnellzugriff">
+  <a href="#kontakt" id="dockContact" data-rybbit-event="dock_contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg>Kontakt</a>
+  <button type="button" class="main" id="dockVersions" data-rybbit-event="dock_versions"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Version wählen</button>
+  <a href="#kontakt" id="dockCall" data-rybbit-event="dock_call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Anrufen</a>
+</nav>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
+  <div class="sheet-head"><h2 id="sheetTitle">Passende Version wählen</h2><button class="frame-close" type="button" id="sheetClose" aria-label="Schließen">×</button></div>
+  <ul>
+    <li><a href="apps/mac.html" data-frame="KI-Anonymisierer für Mac">Mac <span>9,99 €</span></a></li>
+    <li><a href="apps/ios.html" data-frame="Anonymisierer für iPhone &amp; iPad">iPhone &amp; iPad <span>9,99 €</span></a></li>
+    <li><a href="apps/windows.html" data-frame="KI-Anonymisierer für Windows">Windows <span>14,99 €</span></a></li>
+    <li><a href="apps/chrome.html" data-frame="KI-Anonymisierer für Chrome">Chrome-Erweiterung <span>kostenlos</span></a></li>
+    <li><a href="apps/server.html" data-frame="KI-Anonymisierer Server &amp; Client">Server &amp; Windows-Client <span>Teams</span></a></li>
+    <li><a href="apps/excel.html" data-frame="KI-Anonymisierer Excel">Excel-Anonymisierer <span>99 € je Platz</span></a></li>
+    <li><a href="#wege">Alle Wege vergleichen <span>Übersicht</span></a></li>
+  </ul>
+</dialog>
+
 <dialog class="tz" id="tz" aria-labelledby="tzTitle">
   <div class="tz-head"><h2 id="tzTitle">Testzugang anfordern</h2><button class="frame-close" type="button" id="tzClose" aria-label="Schließen">×</button></div>
   <form id="tzForm">
@@ -978,7 +1019,7 @@ html.hc .team-shade{background:rgba(14,23,41,.88)}
 
   const hero = $('hero'), wCopy = $('wCopy'), wAmp = $('wAmp'), wPaste = $('wPaste'), card = $('card');
   const sws = [...card.querySelectorAll('.sw')];
-  const cardState = $('cardState'), cardCount = $('cardCount'), cardKeys = $('cardKeys'), heroEnd = $('heroEnd'), hint = $('hint');
+  const cardState = $('cardState'), cardCount = $('cardCount'), cardKeys = $('cardKeys'), heroEnd = $('heroEnd'), hint = $('hint'), heroTop = document.querySelector('.hero-top');
   let keyState = '';
   const setKeys = k => { if (k === keyState) return; keyState = k; cardKeys.innerHTML = k.split(' ').map(x => '<kbd>' + x + '</kbd>').join(''); };
   const renderHero = p => {
@@ -1004,9 +1045,15 @@ html.hc .team-shade{background:rgba(14,23,41,.88)}
     wCopy.style.opacity = wPaste.style.opacity = fade;
     wAmp.style.opacity = 1 - clamp(a * 2.2);
     wAmp.style.transform = `scale(${1 - a * .6})`;
-    const cardLift = clamp((p - .84) / .1) * (vertical ? 60 : innerHeight < 800 ? 24 : 70);
+    const lift = clamp((p - .84) / .1);
+    let cardLift = lift * (innerHeight < 800 ? 24 : 70), fit = 1;
+    if (vertical) {
+      const top = heroTop.offsetTop + heroTop.offsetHeight, bot = heroEnd.offsetTop;
+      fit = Math.min(1, (bot - top - 24) / ch);
+      cardLift = lift * (card.parentNode.clientHeight / 2 - (top + bot) / 2);
+    }
     card.style.opacity = clamp((p - .06) / .16);
-    card.style.transform = `translate(-50%,calc(-50% - ${cardLift}px)) scale(${.72 + a * .28})`;
+    card.style.transform = `translate(-50%,calc(-50% - ${cardLift}px)) scale(${(.72 + a * .28) * (1 - lift * (1 - fit))})`;
     const hits = Math.floor(clamp((p - .3) / .22) * 5.99);
     const dones = Math.floor(clamp((p - .55) / .24) * 5.99);
     sws.forEach((el, i) => { el.classList.toggle('hit', i < hits && i >= dones); el.classList.toggle('done', i < dones); });
@@ -1215,17 +1262,35 @@ html.hc .team-shade{background:rgba(14,23,41,.88)}
   const orgInner = org.querySelector('.org');
   const fitOrg = () => {
     org.classList.remove('static');
-    const need = orgInner.firstElementChild.scrollHeight + 66 + 24;
+    const kids = [...orgInner.children];
+    const need = Math.max(...kids.map(c => c.offsetTop + c.offsetHeight)) - Math.min(...kids.map(c => c.offsetTop)) + 66 + 24 + (innerWidth <= 980 ? 84 : 0);
     if (need > innerHeight) org.classList.add('static');
   };
   fitOrg();
   addEventListener('resize', fitOrg);
   document.fonts && document.fonts.ready.then(fitOrg);
-  const renderOrg = p => {
-    orgCount.firstChild.nodeValue = Math.round(clamp((p - .05) / .45) * 200);
-    orgViz.style.setProperty('--clip', ((1 - ease(clamp((p - .02) / .62))) * 100) + '%');
-    orgPoints.forEach((li, i) => li.classList.toggle('on', p > .5 + i * .08));
+  const setOrg = (count, reveal, pointsOn) => {
+    orgCount.firstChild.nodeValue = Math.round(count * 200);
+    orgViz.style.setProperty('--clip', ((1 - reveal) * 100) + '%');
+    orgPoints.forEach((li, i) => li.classList.toggle('on', pointsOn(i)));
   };
+  let orgStart = 0;
+  const orgTimed = () => {
+    const t = (performance.now() - orgStart) / 1000;
+    setOrg(ease(clamp(t / 1.6)), ease(clamp((t - .15) / 1.7)), i => t > .6 + i * .28);
+    if (t < 2.4) setTimeout(orgTimed, 16);
+  };
+  const renderOrg = p => {
+    if (!org.classList.contains('static')) {
+      setOrg(clamp((p - .05) / .45), ease(clamp((p - .02) / .62)), i => p > .5 + i * .08);
+      return;
+    }
+    if (orgStart) return;
+    if (org.getBoundingClientRect().top < innerHeight * .7) startOrg();
+    else setOrg(0, 0, () => false);
+  };
+  const startOrg = () => { if (orgStart) return; orgStart = performance.now(); orgTimed(); };
+  if ('IntersectionObserver' in window) new IntersectionObserver(es => { if (es[0].isIntersecting && org.classList.contains('static') && !reduced) startOrg(); }, { rootMargin: '0px 0px -30% 0px' }).observe(org);
   const team = $('team'), teamCopy = $('teamCopy'), teamStage = team.querySelector('.sticky');
   const renderTeam = p => {
     teamStage.style.setProperty('--tz', 1.25 - ease(clamp(p / .7)) * .25);
@@ -1254,7 +1319,7 @@ html.hc .team-shade{background:rgba(14,23,41,.88)}
     renderPortrait(sp);
     renderTeam(progress(team));
     renderFamily(familyT(progress(family)));
-    renderOrg(org.classList.contains('static') ? 1 : progress(org));
+    renderOrg(progress(org));
   };
   const request = () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } };
   addEventListener('scroll', request, { passive: true });
@@ -1262,7 +1327,7 @@ html.hc .team-shade{background:rgba(14,23,41,.88)}
   document.fonts && document.fonts.ready.then(request);
 
   if (reduced) {
-    renderHero(1); renderDay(.72); renderStory(1); renderPortrait(1); renderTeam(.5); renderFamily(0); renderOrg(1);
+    renderHero(1); renderDay(.72); renderStory(1); renderPortrait(1); renderTeam(.5); renderFamily(0); setOrg(1, 1, () => true);
     heroEnd.style.position = 'relative';
   }
   frame();
@@ -1407,6 +1472,26 @@ html.hc .team-shade{background:rgba(14,23,41,.88)}
     openFrame(a.getAttribute('href'), a.dataset.frame);
   });
 
+
+  const dock = $('dock'), sheet = $('sheet');
+  const phoneNo = ['+49', '171', '8646', '207'].join('');
+  $('dockCall').href = 'tel:' + phoneNo;
+  $('dockContact').addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('kontakt').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
+    setTimeout(() => { const f = document.querySelector('#contactForm input[name="name"]'); if (f) f.focus({ preventScroll: true }); }, reduced ? 0 : 700);
+  });
+  $('dockVersions').addEventListener('click', () => sheet.showModal());
+  $('sheetClose').addEventListener('click', () => sheet.close());
+  sheet.addEventListener('click', e => { if (e.target === sheet || e.target.closest('a')) sheet.close(); });
+  const kontakt = document.getElementById('kontakt');
+  const updateDock = () => {
+    const r = kontakt.getBoundingClientRect();
+    dock.classList.toggle('hide', nav2.classList.contains('menu-open') || (r.top < innerHeight * .6 && r.bottom > 0));
+  };
+  addEventListener('scroll', updateDock, { passive: true });
+  menuBtn.addEventListener('click', updateDock);
+  updateDock();
   const tz = $('tz'), tzForm = $('tzForm'), tzDone = $('tzDone'), tzStatus = $('tzStatus'), tzSend = $('tzSend');
   let tzReturn = null;
   const openTz = () => {
