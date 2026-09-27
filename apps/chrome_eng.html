@@ -113,6 +113,13 @@ footer a{text-decoration:none}
 .pc .screen img{width:100%;height:100%;object-fit:cover}
 .pc .base{background:linear-gradient(#5a5f69,#34373e 60%,#1f2126)}
 .pc .base::before{background:#2a2d33}
+.sec-intro{margin:-20px 0 26px;color:var(--muted);font-size:17px;max-width:62ch}
+.sec-badge{display:inline-block;margin:0 0 22px;padding:6px 12px;border-radius:999px;background:var(--marker);color:var(--ink);font-weight:700;font-size:14px}
+.sec-list{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 28px}
+.sec-list li{display:grid;grid-template-columns:14px 1fr;gap:10px;color:var(--ink);font-size:15.5px}
+.sec-list li::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--marker);margin-top:7px;box-shadow:0 0 0 1px rgba(14,23,41,.15)}
+.shots.win img{max-height:460px;width:auto;margin:auto;border-radius:10px}
+@media (max-width:860px){.sec-list{grid-template-columns:1fr}}
 .org-viz img{border-radius:18px;box-shadow:0 40px 80px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.08)}
 html.embedded .top,html.embedded footer{display:none}
 html.embedded .hero{padding-top:40px}
@@ -146,10 +153,11 @@ html.embedded .hero{padding-top:40px}
 <section class="block"><div class="wrap"><h2>Reduced to what matters in the browser.</h2><ol class="steps"><li><h3>Paste text</h3><p>From a website, email, form or AI chat.</p></li><li><h3>Anonymize</h3><p>People, addresses, contact details, identifiers and dates are replaced.</p></li><li><h3>Review</h3><p>Categories show what was detected. The final check stays with you.</p></li><li><h3>Copy</h3><p>Take the anonymized version back into your browser workflow.</p></li></ol></div></section>
 <section class="block" style="padding-top:0"><div class="wrap"><h2>What the extension does</h2><div class="features"><div class="feature"><h3>Paste Guard</h3><p>Checks text in supported AI chats before pasting and anonymizes it in the intended flow.</p></div><div class="feature"><h3>Server connection</h3><p>Can use KI-Anonymisierer Server for detection, so browser workstations share the same central service.</p></div><div class="feature"><h3>Rule-based detection</h3><p>Names, addresses, contact details and identifiers, locally in the browser.</p></div><div class="feature"><h3>Gemini Nano optional</h3><p>Chrome’s local AI as a second detection layer when device and browser support it.</p></div><div class="feature"><h3>Visible categories</h3><p>Detected areas stay traceable instead of a black box.</p></div><div class="feature"><h3>Light and dark</h3><p>Compact interface for different browser setups.</p></div></div></div></section>
 
+
 <section class="block" style="padding-top:0"><div class="wrap"><div class="note"><div><h3>Good to know</h3><p>Paste Guard works in supported AI chats, not on every website. With a server connection, text is sent to your own server for analysis. The extension stays free; a shared company server has its own license terms.</p></div></div></div></section>
 <section class="block" style="padding-top:0"><div class="wrap"><h2>Frequently asked questions</h2><details><summary>Is the extension really free?</summary><p>Yes, you install it for free from the Chrome Web Store.</p></details><details><summary>Does Chrome replace the Mac or Windows app?</summary><p>No. Chrome is for text workflows in the browser. The desktop apps add system-wide shortcuts, and on Mac also images and restoration.</p></details><details><summary>What is Gemini Nano?</summary><p>Chrome’s local AI. If your device supports it, the extension can use it in addition to rule-based detection. You can switch it on or off in the settings.</p></details><details><summary>What does the server connection change?</summary><p>Detection then runs on your KI-Anonymisierer Server instead of only in the browser. Useful when rules and custom terms should be maintained centrally.</p></details></div></section>
 <section class="cta"><div class="wrap"><h2>Installed in a minute.</h2><div class="btns"><a class="btn primary" href="https://chromewebstore.google.com/detail/jaoallgfipnfnibbnjeflecgfmbhefoa" target="_blank" rel="noopener noreferrer" data-rybbit-event="chrome_cta_click">Add to Chrome for free</a></div></div></section>
-<section class="block" style="padding:48px 0"><div class="wrap"><p class="kicker" style="color:var(--muted)">Other workplaces</p><div class="family"><a href="mac_eng.html">Mac</a><a href="ios_eng.html">iPhone &amp; iPad</a><a href="windows_eng.html">Windows</a><a href="server_eng.html">Server &amp; client</a></div></div></section>
+<section class="block" style="padding:48px 0"><div class="wrap"><p class="kicker" style="color:var(--muted)">Other workplaces</p><div class="family"><a href="mac_eng.html">Mac</a><a href="ios_eng.html">iPhone &amp; iPad</a><a href="windows_eng.html">Windows</a><a href="server_eng.html">Server &amp; client</a><a href="excel_eng.html">Excel</a></div></div></section>
 </main>
 <footer><div class="wrap"><span>© 2026 Robert Meyer</span><a href="../impressum_eng.html">Legal notice</a><a href="../datenschutz_eng.html">Privacy</a><a href="../eula-server_eng.html">Server EULA</a><a href="../eula-mac_eng.html">Mac EULA</a></div></footer>
 </body>
